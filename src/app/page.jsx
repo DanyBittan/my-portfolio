@@ -2,8 +2,9 @@ export default function Home() {
   return (
     <main>
       <section className="synthwave-background flex items-center justify-center">
-        <div>
-          <span className="text-[#C14694] z-0 text-9xl font-pixel drop-shadow-2xl shadow-yellow-300">
+        <div className="text-black text-[11rem] font-pixel h-2/4 w-auto flex items-center">
+          <span className="absolute ">DANIEL BITTAN</span>
+          <span className="text-shadow shadow-yellow-500 animate-pulse">
             DANIEL BITTAN
           </span>
         </div>
