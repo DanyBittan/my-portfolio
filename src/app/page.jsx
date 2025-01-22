@@ -1,14 +1,17 @@
 export default function Home() {
   return (
     <main>
-      <section className="synthwave-background flex items-center justify-center">
-        <div className="text-black text-[11rem] font-pixel h-2/4 w-auto flex items-center">
-          <span className="absolute ">DANIEL BITTAN</span>
-          <span className="text-shadow shadow-yellow-500 animate-pulse">
-            DANIEL BITTAN
-          </span>
+      <section className="synthwave-background flex items-center justify-center"></section>
+      <div className="text-black text-[11rem] font-pixel h-screen w-auto flex flex-col items-center justify-center">
+        <span className="absolute">DANIEL BITTAN</span>
+        <span className="text-shadow shadow-yellow-500 animate-pulse">
+          DANIEL BITTAN
+        </span>
+        <div className="flex justify-evenly">
+          <button>a</button>
+          <button>a</button>
         </div>
-      </section>
+      </div>
     </main>
   );
 }
