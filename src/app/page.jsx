@@ -1,13 +1,16 @@
 export default function Home() {
   return (
     <main>
-      <section className="synthwave-background flex items-center justify-center"></section>
-      <div className="text-black text-[11rem] font-pixel h-screen w-auto flex flex-col items-center justify-center">
-        <span className="absolute">DANIEL BITTAN</span>
-        <span className="text-shadow shadow-yellow-500 animate-pulse">
-          DANIEL BITTAN
-        </span>
-        <div className="flex justify-evenly">
+      {/* puedo usar el section para sustituir el div inferior */}
+      <section className="synthwave-background z-0" />
+      <div className="flex flex-col h-screen w-auto items-center justify-evenly">
+        <div className="text-blue-400 text-[10rem] font-pixel tracking-tighter">
+          <span className="absolute">FULL STACK DEVELOPER</span>
+          <span className="text-shadow shadow-blue-600 animate-pulse">
+            FULL STACK DEVELOPER
+          </span>
+        </div>
+        <div className="w-full h-auto text-6xl text-white flex justify-evenly">
           <button>a</button>
           <button>a</button>
         </div>
