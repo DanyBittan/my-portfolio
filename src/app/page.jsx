@@ -2,17 +2,21 @@ export default function Home() {
   return (
     <main>
       {/* puedo usar el section para sustituir el div inferior */}
-      <section className="synthwave-background z-0" />
+      <section id="title" className="synthwave-background z-0" />
       <div className="flex flex-col h-screen w-auto items-center justify-evenly">
-        <div className="text-blue-400 text-[10rem] font-pixel tracking-tighter">
-          <span className="absolute">FULL STACK DEVELOPER</span>
-          <span className="text-shadow shadow-blue-600 animate-pulse">
-            FULL STACK DEVELOPER
-          </span>
+        {/* Usar el background como color del texto */}
+        <div className="synthTitle text-[10rem] font-pixel">
+          <span>DANIEL BITTAN</span>
         </div>
-        <div className="w-full h-auto text-6xl text-white flex justify-evenly">
-          <button>a</button>
-          <button>a</button>
+        <div className="w-full h-auto text-3xl text-white flex justify-evenly uppercase">
+          <button className="button-container">
+            <strong>About me</strong>
+            <div className="inner-container"></div>
+          </button>
+          <button className="button-container">
+            <strong>My projects</strong>
+            <div className="inner-container"></div>
+          </button>
         </div>
       </div>
     </main>

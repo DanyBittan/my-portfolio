@@ -10,7 +10,7 @@
     transparent 20%,
     rgba(255, 147, 249, 0.4)
   );
-  perspective: 100vh;
+  perspective: 85vh;
 
   &:after {
     content: "";
@@ -25,7 +25,7 @@
       linear-gradient(90deg, #c14694 1px, transparent 0);
     background-size: 200px 200px, 200px 200px, 40px 40px, 40px 40px;
     background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
-    transition: top 1s ease;
+    transition: top 2s ease;
     animation: move-grid 1.5s forwards, 9s linear infinite crawlingWall;
     animation-delay: 1s;
   }
@@ -36,7 +36,7 @@
     top: -50vh;
   }
   100% {
-    transform: rotateX(52deg);
+    transform: rotateX(55deg);
     top: -100vh;
   }
 }
@@ -47,21 +47,84 @@
   }
 }
 
+.synthTitle{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 5px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    0deg,
+    rgba(255, 142, 224, 1) 0%,
+    rgba(255, 29, 193, 1) 5%,
+    rgba(198, 72, 255, 1) 30%,
+    rgba(0, 0, 0, 1) 49%,
+    rgba(255, 255, 255, 1) 52%,
+    rgba(70, 148, 255, 1) 60%,
+    rgba(21, 59, 112, 1) 69%
+  );
+}
 /* Buttons */
 
-.title-buttons {
+.button-container {
   all: unset;
-  height: 4rem;
-  width: 16rem;
+  height: 6rem;
+  width: 20rem;
   position: relative;
   border-radius: 20px;
-  border: double 3px transparent;
+  border: double 2px transparent;
   transition: 50ms;
   background-image: linear-gradient(#212121, #212121),
-    linear-gradient(0, #ffdb3b 0%, #fe53bb 25%, #8f51ea 87%);
+    linear-gradient(0, #6f00c9 0%, #fe53bb 25%, #4694ff 87%);
   background-origin: border-box;
   background-clip: content-box, border-box;
   cursor: pointer;
 }
-.synthwave-buttons {
+
+.button-container:hover > strong {
+  transition: 300ms;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  filter: brightness(1.75);
+  text-shadow: 2px 0 14px #fff;
+}
+
+.inner-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 18px;
+  background-image: url("/pictures/grid-bg.jpg");
+  background-size: 100% 100%;
+}
+
+strong{
+  transition: 300ms;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  letter-spacing: 5px;
+  z-index: 2;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 8px rgba(56, 127, 224, 0.4),
+    -2px -2px 8px rgba(254, 125, 255, 0.4);
+  background-image: linear-gradient(
+    0deg,
+    rgba(255, 142, 224, 1) 0%,
+    rgba(255, 29, 193, 1) 5%,
+    rgba(198, 72, 255, 1) 30%,
+    rgba(255, 255, 255, 1) 52%,
+    rgba(70, 148, 255, 1) 60%,
+    rgba(21, 59, 112, 1) 69%
+  );
 }
