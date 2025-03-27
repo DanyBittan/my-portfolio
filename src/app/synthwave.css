@@ -49,19 +49,22 @@
 
 .synthTitle{
   display: flex;
+  flex-direction: column;
   width: 100%;
+  font-size: 10rem;
   align-items: center;
   justify-content: center;
   letter-spacing: 5px;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  
   background-image: linear-gradient(
     0deg,
     rgba(255, 142, 224, 1) 0%,
-    rgba(255, 29, 193, 1) 5%,
-    rgba(198, 72, 255, 1) 30%,
-    rgba(0, 0, 0, 1) 49%,
+    rgba(255, 29, 193, 1) 8%,
+    rgba(198, 72, 255, 1) 37%,
+    rgba(0, 0, 0, 1) 50%,
     rgba(255, 255, 255, 1) 52%,
     rgba(70, 148, 255, 1) 60%,
     rgba(21, 59, 112, 1) 69%
@@ -128,3 +131,4 @@ strong{
     rgba(21, 59, 112, 1) 69%
   );
 }
+

@@ -20,6 +20,7 @@ module.exports = {
       },
       fontFamily:{
         'pixel': ["Pixelify Sans", "sans-serif"], 
+        'rocket': ["Rocket", "sans-serif"],
       },
     },
   },

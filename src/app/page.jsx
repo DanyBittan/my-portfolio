@@ -5,10 +5,15 @@ export default function Home() {
       <section id="title" className="synthwave-background z-0" />
       <div className="flex flex-col h-screen w-auto items-center justify-evenly">
         {/* Usar el background como color del texto */}
-        <div className="synthTitle text-[10rem] font-pixel">
-          <span>DANIEL BITTAN</span>
+        <div className="synthTitle font-rocket">
+          <span className="synthTitle">DANIEL BITTAN</span>
+          {/* Añadir animación que venga desde el fondo (Profundidad) */}
+          <span className="text-6xl bg-gradient-to-b from-blue-500 via-black to-pink-900 bg-clip-text">
+            Full Stack Developer
+          </span>
         </div>
-        <div className="w-full h-auto text-3xl text-white flex justify-evenly uppercase">
+
+        <div className="w-full h-auto text-3xl text-white flex justify-evenly uppercase font-pixel">
           <button className="button-container">
             <strong>About me</strong>
             <div className="inner-container"></div>
