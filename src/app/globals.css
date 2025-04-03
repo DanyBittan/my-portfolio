@@ -9,3 +9,8 @@
     src: url(/fonts/rocketFont.otf);
     font-weight: normal;
 }
+@font-face {
+    font-family: "Alien";
+    src: url(/fonts/Alien/Alien-Encounters-Regular.ttf);
+    font-weight: normal;
+}
