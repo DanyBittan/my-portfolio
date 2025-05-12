@@ -20,12 +20,12 @@
   height: 100%;
     position: absolute;
   background-image: linear-gradient(
-    rgba(0, 83, 25, 0.315),
-    rgba(0, 75, 0, 0.233)
+    rgba(96, 0, 99, 0.26),
+    rgba(80, 0, 75, 0.192)
   );
   background-repeat: repeat;
   background-size: 100vw 10vh;
-  animation: bgscroll 4s linear infinite;
+  animation: bgscroll 14s linear infinite;
 }
 
 @keyframes bgscroll {

@@ -1,5 +1,4 @@
 .synthwave-background {
-  z-index: -1;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -8,9 +7,10 @@
   background-image: linear-gradient(
     180deg,
     transparent 20%,
-    rgba(255, 147, 249, 0.4)
+    rgba(168, 101, 165, 0.4)
   );
-  perspective: 85vh;
+  box-shadow: inset 0 0 10em 5px;
+  perspective: 88vh;
 
   &:after {
     content: "";
@@ -26,17 +26,17 @@
     background-size: 200px 200px, 200px 200px, 40px 40px, 40px 40px;
     background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
     transition: top 2s ease;
-    animation: move-grid 1.5s forwards, 9s linear infinite crawlingWall;
+    animation: move-grid 1.5s forwards, 25s linear infinite crawlingWall;
     animation-delay: 1s;
   }
 }
 @keyframes move-grid {
   0% {
     transform: rotateX(0deg);
-    top: -50vh;
+    top: -95vh;
   }
   100% {
-    transform: rotateX(55deg);
+    transform: rotateX(52deg);
     top: -100vh;
   }
 }

@@ -11,18 +11,20 @@ export default function SynthIntro() {
           DANIEL BITTAN
         </h1>
         {/* Añadir animación que venga desde el fondo (Profundidad) */}
-        <p className="subTitle text-6xl bg-clip-text">Full Stack Developer</p>
+        <p className="subTitle text-5xl bg-clip-text top">
+          Full Stack Developer
+        </p>
       </div>
 
       <div className="w-full h-auto text-3xl text-white flex justify-evenly uppercase font-pixel">
-        <button className="button-container">
+        <a href="#aboutme" className="button-container">
           <strong>About me</strong>
           <div className="inner-container"></div>
-        </button>
-        <button className="button-container">
+        </a>
+        <a href="#projects" className="button-container scroll.">
           <strong>My projects</strong>
           <div className="inner-container"></div>
-        </button>
+        </a>
       </div>
     </section>
   );
