@@ -33,3 +33,8 @@
       background-position: 0% 100%;
     } 
 }
+
+li{
+  font-weight: bold;
+  position: relative;
+}

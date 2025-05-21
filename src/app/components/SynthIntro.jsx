@@ -6,7 +6,7 @@ export default function SynthIntro() {
     >
       {/* Usar el background como color del texto */}
       <div className="synthTitle font-rocket relative text-[8rem] 2xl:text-[10rem]">
-        <h1 className="synthTitle absolute right-0 top-1">DANIEL BITTAN</h1>
+        <h1 className="synthTitle absolute top-1">DANIEL BITTAN</h1>
         <h1 className=" text-blue-100 text-[8.1rem] 2xl:text-[10.1rem]">
           DANIEL BITTAN
         </h1>

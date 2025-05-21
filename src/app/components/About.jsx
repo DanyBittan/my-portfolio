@@ -4,7 +4,7 @@ export default function About() {
       id="aboutme"
       className="w-full h-screen flex justify-center items-center "
     >
-      <div className="w-4/5 h-2/3 bg-purple-900 border-2 border-purple-600 relative text-shadow-sm shadow-white text-pink-100 font-alien z-10 ">
+      <div className="w-3/4 h-4/5 bg-purple-900 border-2 border-purple-600 relative text-shadow-sm shadow-white text-pink-100 font-alien ">
         <div className="crt"></div>
         <div id="aboutText" className=" w-2/3 h-full p-4">
           <h1 className="mt-8 ml-12 text-5xl">About Me</h1>
