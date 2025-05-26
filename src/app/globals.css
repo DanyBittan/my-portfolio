@@ -35,6 +35,11 @@
 }
 
 li{
-  font-weight: bold;
   position: relative;
+  padding-left: 10px;
+}
+
+li:hover{
+  font-size: 1.8rem;
+  border-left: 2px solid white;
 }

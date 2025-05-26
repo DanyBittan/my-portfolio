@@ -12,6 +12,8 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'space': "url('/Pictures/spaceBg.jpg')",
+        'space2': "url('/Pictures/space2.jpg')",
       },
       textShadow: {
         sm: '2px 2px 8px var(--tw-shadow-color)',

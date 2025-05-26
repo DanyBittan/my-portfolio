@@ -21,7 +21,7 @@ export default function SynthIntro() {
           <strong>About me</strong>
           <div className="inner-container"></div>
         </a>
-        <a href="#projects" className="button-container scroll.">
+        <a href="#projects" className="button-container">
           <strong>My projects</strong>
           <div className="inner-container"></div>
         </a>
