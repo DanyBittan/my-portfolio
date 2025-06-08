@@ -1,6 +1,8 @@
+"use client";
 import About from "./components/About";
 import SynthIntro from "./components/SynthIntro";
 import Projects from "./components/Projects";
+import React, { useState } from "react";
 
 export default function Home() {
   return (

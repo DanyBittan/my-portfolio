@@ -16,8 +16,6 @@
 }
 
 .crt{
-    width: 100%;
-  height: 100%;
     position: absolute;
   background-image: linear-gradient(
     rgba(96, 0, 99, 0.26),
@@ -34,12 +32,21 @@
     } 
 }
 
+.projects-bg{
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 20%,
+    #db2777 50%,
+    #4d038a 65%
+)}
+
 li{
   position: relative;
   padding-left: 10px;
 }
 
-li:hover{
+li:hover {
   font-size: 1.8rem;
   border-left: 2px solid white;
 }
