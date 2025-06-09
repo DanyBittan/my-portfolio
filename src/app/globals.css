@@ -36,14 +36,15 @@
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    transparent 20%,
-    #db2777 50%,
-    #4d038a 65%
+    transparent 40%,
+    #db2777 65%,
+    #360063 75%
 )}
 
 li{
   position: relative;
   padding-left: 10px;
+  transition: 0.3s;
 }
 
 li:hover {
