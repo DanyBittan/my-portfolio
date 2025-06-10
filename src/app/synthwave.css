@@ -60,23 +60,20 @@
   color: transparent;
   
   background-image: linear-gradient(
-    180deg,
-    rgba(21, 59, 112, 1) 0%,
-    rgba(70, 148, 255, 1)  37%,
-    rgba(255, 255, 255, 1) 55%,
-    rgba(70, 148, 255, 1) 70%,
-    rgba(21, 59, 112, 1) 74%
+    #ffd319 0%,
+    #ff901f 35%,
+    #ff2975 55%,
+    #f222ff 80%
   );
 }
+/*     #db2777 90% */
 
 .subTitle{
   background-image: linear-gradient(
-    180deg,
-    rgba(21, 59, 112, 1) 0%,
-    rgba(70, 148, 255, 1)  37%,
-    rgba(255, 255, 255, 1) 55%,
-    rgba(70, 148, 255, 1) 70%,
-    rgba(21, 59, 112, 1) 80%
+    #ffd319 0%,
+    #ff901f 35%,
+    #ff2975 55%,
+    #f222ff 80%
   );
 }
 /* Buttons */
@@ -87,22 +84,17 @@
   width: 20rem;
   position: relative;
   border-radius: 20px;
-  border: double 2px transparent;
+  border: solid 3px rgb(194, 0, 194);
   transition: 50ms;
-  background-image: linear-gradient(#212121, #212121),
-    linear-gradient(0, #6f00c9 0%, #fe53bb 25%, #4694ff 87%);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
   cursor: pointer;
 }
 
-.button-container:hover > strong {
+.button-container:hover > span {
   transition: 300ms;
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
-  filter: brightness(1.75);
-  text-shadow: 2px 0 14px #fff;
+  color: orange;
+  text-shadow: 2px 2px 0px yellow ;
 }
 
 .inner-container {
@@ -111,12 +103,12 @@
   overflow: hidden;
   position: relative;
   border-radius: 18px;
-  background-image: url("/pictures/grid-bg.jpg");
-  background-size: 100% 100%;
+  background: radial-gradient(circle at top, #1a0033, #0a0114)
 }
 
-strong{
+span{
   transition: 300ms;
+  
   display: flex;
   height: 100%;
   width: 100%;
@@ -127,17 +119,7 @@ strong{
   z-index: 2;
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
-  text-shadow: 2px 2px 8px rgba(56, 127, 224, 0.4),
-    -2px -2px 8px rgba(254, 125, 255, 0.4);
-  background-image: linear-gradient(
-    0deg,
-    rgba(255, 142, 224, 1) 0%,
-    rgba(255, 29, 193, 1) 5%,
-    rgba(198, 72, 255, 1) 30%,
-    rgba(255, 255, 255, 1) 52%,
-    rgba(70, 148, 255, 1) 60%,
-    rgba(21, 59, 112, 1) 69%
-  );
+  color: yellow;
+  text-shadow:-2px -2px 0px orange;
 }
 

@@ -17,7 +17,7 @@ module.exports = {
       },
       textShadow: {
         sm: '2px 2px 8px var(--tw-shadow-color)',
-        DEFAULT: '0 0px 16px var(--tw-shadow-color)',
+        DEFAULT: '0 0px 14px var(--tw-shadow-color)',
         lg: '0 8px 16px var(--tw-shadow-color)',
       },
       fontFamily:{

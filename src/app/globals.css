@@ -49,5 +49,12 @@ li{
 
 li:hover {
   font-size: 1.8rem;
-  border-left: 2px solid white;
+  background-color: inherit;
+  color:white;
+  border-radius: 2em;
+  padding-inline: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-left: 0.5em solid rgb(255, 174, 0);
+  border-right: 0.5em solid rgb(255, 174, 0);
 }

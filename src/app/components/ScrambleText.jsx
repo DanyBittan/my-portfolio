@@ -1,21 +1,20 @@
 "use client";
-import React, { useEffect, useState } from "react";
 
-export default function ScrambleText({}) {
-  const welcomeText = "Welcome to my portfolio!";
-  const [scramble, setScramble] = useState([]);
+import { useScramble } from "use-scramble";
 
-  useEffect(() => {
-    const chars =
-      "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:',.<>/?~`¿¡";
-    const splitText = welcomeText.split("");
-    while (splitText.length > 0) {
-      let posicion = Math.floor(Math.random() * splitText.length);
-      let elemento = splitText.splice(posicion, 1)[0];
-      setScramble(elemento);
-    }
-  }, []);
-  console.log(scramble);
+export default function ScrambleText(props) {
+  const { ref } = useScramble({
+    text: "Welcome to my portfolio!",
+    speed: 0.4,
+    scramble: 5,
+    seed: 4,
+    chance: 0.4,
+    overdrive: 126,
+    onAnimationEnd: () =>
+      setTimeout(() => {
+        props.setAnimation(true);
+      }, 1000),
+  });
 
-  return <div className="text-5xl">{scramble}</div>;
+  return <span ref={ref} className="text-5xl text-white" />;
 }
