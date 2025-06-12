@@ -1,10 +1,8 @@
 :root {
-  --synthwave-gradient: linear-gradient(
-    #ffd319 0%,
-    #ff901f 35%,
-    #ff2975 55%,
-    #f222ff 80%
-  );
+  --synthwave-gradient: linear-gradient(#ffd319 0%,
+      #ff901f 35%,
+      #ff2975 55%,
+      #f222ff 80%);
 }
 
 .synthwave-background {
@@ -13,11 +11,9 @@
   bottom: 0;
   width: 100%;
   background: #011627;
-  background-image: linear-gradient(
-    180deg,
-    transparent 20%,
-    rgba(168, 101, 165, 0.4)
-  );
+  background-image: linear-gradient(180deg,
+      transparent 20%,
+      rgba(168, 101, 165, 0.4));
   box-shadow: inset 0 0 10em 5px;
   perspective: 88vh;
 
@@ -39,11 +35,13 @@
     animation-delay: 1s;
   }
 }
+
 @keyframes move-grid {
   0% {
     transform: rotateX(0deg);
     top: -95vh;
   }
+
   100% {
     transform: rotateX(52deg);
     top: -100vh;
@@ -56,7 +54,7 @@
   }
 }
 
-.synthTitle{
+.synthTitle {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -67,58 +65,12 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  
+
   background-image: var(--synthwave-gradient);
 }
+
 /*     #db2777 90% */
 
-.subTitle{
+.subTitle {
   background-image: var(--synthwave-gradient);
 }
-/* Buttons */
-
-.button-container {
-  all: unset;
-  height: 6rem;
-  width: 20rem;
-  position: relative;
-  border-radius: 20px;
-  border: solid 3px rgb(194, 0, 194);
-  transition: 50ms;
-  cursor: pointer;
-}
-
-.button-container:hover > span {
-  transition: 300ms;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: orange;
-  text-shadow: 2px 2px 0px yellow ;
-}
-
-.inner-container {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  border-radius: 18px;
-  background: radial-gradient(circle at top, #1a0033, #0a0114)
-}
-
-span{
-  transition: 300ms;
-  
-  display: flex;
-  height: 100%;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  letter-spacing: 5px;
-  z-index: 2;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: yellow;
-  text-shadow:-2px -2px 0px orange;
-}
-

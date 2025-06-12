@@ -1,3 +1,4 @@
+import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
 export default function SynthIntro() {
   return (
     <section
@@ -22,13 +23,14 @@ export default function SynthIntro() {
       </div>
 
       <div className="w-full h-auto text-2xl text-white flex justify-evenly uppercase font-rocket">
-        <a href="#aboutme" className="button-container">
-          <span>About me</span>
-          <div className="inner-container"></div>
+        <a href="https://github.com/DanyBittan" target="_blank" rel="noopener noreferrer" className='w-48 h-48 flex justify-center items-center rounded-full z-10 border-4 relative'>
+          <IconBrandGithub stroke={1} width={256} height={256} color='#da2777' className='relative -bottom-5'/>
         </a>
-        <a href="#projects" className="button-container">
-          <span>My projects</span>
-          <div className="inner-container"></div>
+        <a href="#aboutme" className='w-48 h-48 flex justify-center items-center z-10 '>
+          <IconBrandLinkedin stroke={1} width={256} height={256} />
+        </a>
+        <a href="#aboutme" className='w-32 h-32 flex justify-center items-center rounded-full z-10 border-4 relative'>
+          <IconBrandGithub stroke={1} width={128} height={128} className='relative -bottom-3'/>
         </a>
       </div>
     </section>

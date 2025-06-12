@@ -16,5 +16,5 @@ export default function ScrambleText(props) {
       }, 1000),
   });
 
-  return <span ref={ref} className="text-5xl text-white" />;
+  return <span ref={ref} className="text-5xl text-white text-shadow shadow-pink-400" />;
 }

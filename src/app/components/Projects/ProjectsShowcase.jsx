@@ -24,44 +24,36 @@ export default function ProjectShowcase(prop) {
   const ProjectView = (
     <div
       id="showcase-container"
-      className="w-1/2 h-3/4 rounded-xl absolute border border-purple-500 shadow-2xl shadow-pink-800"
+      className="w-1/2 h-2/3 absolute border border-purple-500 rounded-md  shadow-2xl shadow-pink-800"
     >
-      <header className="h-16 w-full bg-violet-950 rounded-t-xl border-b border-purple-400 font-alien flex items-center uppercase justify-center z-10">
+      <header className="h-16 w-full bg-violet-950 rounded-t-md border-b border-purple-400 font-alien flex items-center uppercase justify-center z-10">
         <h1 className="text-pink-200 text-4xl text-shadow-sm shadow-pink-400">
           {projectName}
         </h1>
       </header>
-      <div className="relative w-full h-[calc(100%-64px)] rounded-b-xl overflow-hidden group">
+      <div className="relative w-full h-[calc(100%-64px)] overflow-hidden rounded-b-md">
         <Image
           src={projectData[projectName]?.img}
           fill={true}
-          sizes="(max-width: 768px) 100vw, 33vw"
           alt={projectName}
-          className="transition-all duration-500 group-hover:blur-[2px] group-hover:scale-110 pointer-events-none "
+          className="object-cover object-center "
         />
         
-
-        {/* Gradiente superpuesto al hacer hover */}
-        
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-t font-rocket from-violet-950 to-transparent pointer-events-none flex flex-col justify-end items-end">
-          <div className="w-full h-auto px-8 my-2 text-pink-200">
-            <p className="text-2xl">{projectData[projectName]?.description}</p>
+      </div>
+      
+          <div className="w-full h-auto my-6 text-pink-200 font-rocket ">
+            <p className="text-2xl ml-1">{projectData[projectName]?.description}</p>
           </div>
-          <div className="w-full h-auto flex gap-2 flex-wrap px-6 py-4 mb-4">
+          <div className="w-full h-auto flex gap-2 flex-wrap py-4 mb-4">
             {projectData[projectName]?.language.map((lang) => (
               <div
                 key={lang}
-                className="w-auto h-auto border bg-violet-950 border-purple-400 font-rocket text-pink-200 text-shadow text-xl shadow-pink-400 rounded-2xl py-1 px-4 mx-1"
+                className="w-auto h-auto border bg-violet-950 border-purple-400 font-rocket text-pink-200 text-shadow text-xl shadow-pink-400 rounded-2xl py-1 px-4"
               >
                 {lang}
               </div>
             ))}
           </div>
-          
-        </div>
-        {/* Botón de enlace al proyecto */} 
-        
-      </div>
     </div>
   );
 

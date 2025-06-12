@@ -20,10 +20,9 @@ module.exports = {
         DEFAULT: '0 0px 14px var(--tw-shadow-color)',
         lg: '0 8px 16px var(--tw-shadow-color)',
       },
-      fontFamily:{
-        'pixel': ["Pixelify Sans", "sans-serif"], 
+      fontFamily: {
         'rocket': ["Rocket", "sans-serif"],
-        'alien':["Alien", "sans-serif"],
+        'alien': ["Alien", "sans-serif"],
       },
     },
   },
