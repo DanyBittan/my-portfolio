@@ -1,3 +1,12 @@
+:root {
+  --synthwave-gradient: linear-gradient(
+    #ffd319 0%,
+    #ff901f 35%,
+    #ff2975 55%,
+    #f222ff 80%
+  );
+}
+
 .synthwave-background {
   position: fixed;
   top: 0;
@@ -59,22 +68,12 @@
   -webkit-background-clip: text;
   color: transparent;
   
-  background-image: linear-gradient(
-    #ffd319 0%,
-    #ff901f 35%,
-    #ff2975 55%,
-    #f222ff 80%
-  );
+  background-image: var(--synthwave-gradient);
 }
 /*     #db2777 90% */
 
 .subTitle{
-  background-image: linear-gradient(
-    #ffd319 0%,
-    #ff901f 35%,
-    #ff2975 55%,
-    #f222ff 80%
-  );
+  background-image: var(--synthwave-gradient);
 }
 /* Buttons */
 

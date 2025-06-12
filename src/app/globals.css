@@ -5,43 +5,41 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "Rocket";
-    src: url(/fonts/rocketFont.otf);
-    font-weight: normal;
-}
-@font-face {
-    font-family: "Alien";
-    src: url(/fonts/Alien/Alien-Encounters-Regular.ttf);
-    font-weight: normal;
+  font-family: "Rocket";
+  src: url(/fonts/rocketFont.otf);
+  font-weight: normal;
 }
 
-.crt{
-    position: absolute;
-  background-image: linear-gradient(
-    rgba(96, 0, 99, 0.26),
-    rgba(80, 0, 75, 0.192)
-  );
+@font-face {
+  font-family: "Alien";
+  src: url(/fonts/Alien/Alien-Encounters-Regular.ttf);
+  font-weight: normal;
+}
+
+.crt {
+  position: absolute;
+  background-image: linear-gradient(rgba(96, 0, 99, 0.26),
+      rgba(80, 0, 75, 0.192));
   background-repeat: repeat;
   background-size: 100vw 10vh;
   animation: bgscroll 14s linear infinite;
 }
 
 @keyframes bgscroll {
-    100% {
-      background-position: 0% 100%;
-    } 
+  100% {
+    background-position: 0% 100%;
+  }
 }
 
-.projects-bg{
-  background: linear-gradient(
-    to bottom,
-    transparent 0%,
-    transparent 40%,
-    #db2777 65%,
-    #360063 75%
-)}
+.projects-bg {
+  background: linear-gradient(to bottom,
+      transparent 0%,
+      transparent 40%,
+      #db2777 65%,
+      #360063 75%)
+}
 
-li{
+li {
   position: relative;
   padding-left: 10px;
   transition: 0.3s;
@@ -50,7 +48,7 @@ li{
 li:hover {
   font-size: 1.8rem;
   background-color: inherit;
-  color:white;
+  color: white;
   border-radius: 2em;
   padding-inline: 20px;
   padding-top: 8px;
