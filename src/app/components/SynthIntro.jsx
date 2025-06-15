@@ -1,4 +1,4 @@
-import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
+import { IconBrandGithub, IconBrandLinkedin, IconFileDownload } from '@tabler/icons-react';
 export default function SynthIntro() {
   return (
     <section
@@ -20,19 +20,34 @@ export default function SynthIntro() {
           </p>
           <p className="text-[3.05rem] text-[#b61a63]">Full Stack Developer</p>
         </div>
+        <div className="w-[36rem] h-auto flex justify-evenly items-center rounded-full mt-12 px-6 py-3 backdrop-blur-md bg-gradient-to-r from-pink-700/30 via-purple-700/40 to-pink-700/30 border border-pink-400/60 shadow-lg shadow-pink-500/20 ring-2 ring-fuchsia-500/30 transition-all duration-300">
+          <a
+            href="https://github.com/DanyBittan"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-24 h-24 flex justify-center items-center rounded-full border-4 border-pink-500 hover:scale-105 transition-transform duration-200 shadow-inner shadow-fuchsia-400/40 bg-black/30"
+          >
+            <IconBrandGithub stroke={1} width={48} height={48} color="#f72aa3" />
+          </a>
+          <a
+            href="https://linkedin.com/in/tuusuario"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-24 h-24 flex justify-center items-center rounded-full border-4 border-blue-400 hover:scale-105 transition-transform duration-200 shadow-inner shadow-blue-300/40 bg-black/30"
+          >
+            <IconBrandLinkedin stroke={1} width={48} height={48} color="#66d3ff" />
+          </a>
+          <a
+            href="/CV_Daniel_Bittan.pdf"
+            download
+            className="w-24 h-24 flex justify-center items-center rounded-full border-4 border-purple-400 hover:scale-105 transition-transform duration-200 shadow-inner shadow-purple-300/40 bg-black/30"
+          >
+            <IconFileDownload stroke={1.2} width={42} height={42} color="#c084fc" />
+          </a>
+        </div>
       </div>
 
-      <div className="w-full h-auto text-2xl text-white flex justify-evenly uppercase font-rocket">
-        <a href="https://github.com/DanyBittan" target="_blank" rel="noopener noreferrer" className='w-48 h-48 flex justify-center items-center rounded-full z-10 border-4 relative'>
-          <IconBrandGithub stroke={1} width={256} height={256} color='#da2777' className='relative -bottom-5'/>
-        </a>
-        <a href="#aboutme" className='w-48 h-48 flex justify-center items-center z-10 '>
-          <IconBrandLinkedin stroke={1} width={256} height={256} />
-        </a>
-        <a href="#aboutme" className='w-32 h-32 flex justify-center items-center rounded-full z-10 border-4 relative'>
-          <IconBrandGithub stroke={1} width={128} height={128} className='relative -bottom-3'/>
-        </a>
-      </div>
+
     </section>
   );
 }

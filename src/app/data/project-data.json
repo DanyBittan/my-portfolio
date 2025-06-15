@@ -1,17 +1,36 @@
 {
-    "DizManga":{
-        "description":"Comic book and manga library store",
-        "img":"/Pictures/DizManga.png",
-        "language":["Laravel","PHP","Vue", "Javascript", "TailWindCSS", "CSS", "MySQL"]
+    "DizManga": {
+        "description": "Comic book and manga library store",
+        "img": "/Pictures/DizManga.png",
+        "language": [
+            "Laravel",
+            "PHP",
+            "Vue",
+            "Javascript",
+            "TailWindCSS",
+            "CSS",
+            "MySQL"
+        ]
     },
-    "Calculator":{
-        "description":"Basic and scientific calculator for some quick maths",
-        "img":"",
-        "language":["Javascript", "CSS", "HTML"]
+    "Calculator": {
+        "description": "Basic and scientific calculator for some quick maths",
+        "img": "",
+        "language": [
+            "Javascript",
+            "CSS",
+            "HTML"
+        ]
     },
-    "Timer":{
-        "description":"Simple and practical timer",
-        "img":"/Pictures/Timer.png",
-        "language":["React", "Javascript", "TailWindCSS","HTML"]
+    "Timer": {
+        "description": "Simple and practical timer",
+        "img": "/Pictures/Timer.png",
+        "language": [
+            "React",
+            "Javascript",
+            "TailWindCSS",
+            "HTML"
+        ],
+        "url": "https://pomodoro-timer-one-amber.vercel.app/",
+        "github": "https://github.com/DanyBittan/Pomodoro-Timer"
     }
 }

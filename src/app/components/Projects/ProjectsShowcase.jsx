@@ -31,29 +31,35 @@ export default function ProjectShowcase(prop) {
           {projectName}
         </h1>
       </header>
-      <div className="relative w-full h-[calc(100%-64px)] overflow-hidden rounded-b-md">
+      <div className="relative w-full h-[calc(100%-64px)] overflow-hidden rounded-b-md group">
         <Image
           src={projectData[projectName]?.img}
           fill={true}
           alt={projectName}
-          className="object-cover object-center "
+          className="object-cover object-center blur-sm group-hover:blur-none transition-all duration-500"
         />
-        
-      </div>
-      
-          <div className="w-full h-auto my-6 text-pink-200 font-rocket ">
+        <div className="w-full h-full flex flex-col justify-end absolute p-6 group-hover:opacity-0 bg-gradient-to-t from-purple-900 via-violet-800/80 to-transparent transition-all duration-500">
+          <div className="w-full h-auto mb-4 text-pink-200 font-rocket ">
             <p className="text-2xl ml-1">{projectData[projectName]?.description}</p>
           </div>
-          <div className="w-full h-auto flex gap-2 flex-wrap py-4 mb-4">
+          <div className="w-full h-auto flex gap-2 flex-wrap mb-4">
             {projectData[projectName]?.language.map((lang) => (
               <div
                 key={lang}
-                className="w-auto h-auto border bg-violet-950 border-purple-400 font-rocket text-pink-200 text-shadow text-xl shadow-pink-400 rounded-2xl py-1 px-4"
+                className="w-auto h-auto border bg-violet-950 border-purple-400 font-rocket text-pink-200 text-shadow text-xl shadow-pink-400 rounded-full py-1 px-4"
               >
                 {lang}
               </div>
             ))}
           </div>
+        </div>
+        <div className="w-1/2 h-16 absolute right-4 mx-2 my-4 flex justify-end items-center z-10 gap-6">
+          {projectData[projectName]?.url && <a href={projectData[projectName]?.url} target="_blank" rel="noopener noreferrer" className="w-auto h-auto text-center px-4 py-2 rounded-2xl border border-purple-400 bg-violet-950 text-2xl text-pink-300 text-shadow shadow-sm shadow-pink-400">Try it out</a>}
+          <a href={projectData[projectName]?.github} target="_blank" rel="noopener noreferrer" className="w-auto h-auto text-center px-4 py-2 rounded-2xl border border-purple-400 bg-violet-950 text-2xl text-pink-300 text-shadow shadow-sm shadow-pink-400">Check out the code</a>
+        </div>
+      </div>
+
+
     </div>
   );
 

@@ -3,12 +3,13 @@
 import { useScramble } from "use-scramble";
 
 export default function ScrambleText(props) {
+  console.log(props);
   const { ref } = useScramble({
-    text: "Welcome to my portfolio!",
-    speed: 0.4,
-    scramble: 5,
-    seed: 4,
-    chance: 0.4,
+    text: props.text,
+    speed: 1,
+    scramble: 2,
+    seed: 1,
+    chance: 0.2,
     overdrive: 126,
     onAnimationEnd: () =>
       setTimeout(() => {
@@ -16,5 +17,5 @@ export default function ScrambleText(props) {
       }, 1000),
   });
 
-  return <span ref={ref} className="text-5xl text-white text-shadow shadow-pink-400" />;
+  return <p ref={ref} className={`${props.classes} text-white text-shadow shadow-pink-400`} />;
 }
