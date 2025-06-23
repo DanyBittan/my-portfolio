@@ -6,7 +6,7 @@ export default function ScrambleText(props) {
   console.log(props);
   const { ref } = useScramble({
     text: props.text,
-    speed: 1,
+    speed: 0.5,
     scramble: 2,
     seed: 1,
     chance: 0.2,

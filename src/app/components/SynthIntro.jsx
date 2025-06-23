@@ -38,8 +38,8 @@ export default function SynthIntro() {
             <IconBrandLinkedin stroke={1} width={48} height={48} color="#66d3ff" />
           </a>
           <a
-            href="/CV_Daniel_Bittan.pdf"
-            download
+            href="#"
+            /* download */
             className="w-24 h-24 flex justify-center items-center rounded-full border-4 border-purple-400 hover:scale-105 transition-transform duration-200 shadow-inner shadow-purple-300/40 bg-black/30"
           >
             <IconFileDownload stroke={1.2} width={42} height={42} color="#c084fc" />
