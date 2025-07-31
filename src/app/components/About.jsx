@@ -8,6 +8,7 @@ export default function About() {
   const [animationEnd, setAnimationEnd] = useState(false);
   const [aboutTopic, setAboutTopic] = useState("About Me");
   const buttonClasses = "hover:text-pink-400 transition-all duration-100";
+  const aboutText = ["USER PROFILE: DANIEL BITTAN", "ROLE: FULL STACK WEB DEVELOPER (JUNIOR)", "FOCUS: LARAVEL | REACT | MYSQL | TAILWINDCSS | GIT OPS | DOCKER", "INTERESTS: COMICS | MOVIES | VIDEO GAMES | SPACE | AI", "OBJECTIVE: SEEKING CHALLENGING PROJECTS TO GROW AND CONTRIBUTE"]
   const { ref, inView } = useInView({
     triggerOnce: true, // solo se activa una vez
   });
@@ -36,9 +37,6 @@ export default function About() {
                 <ScrambleText text="VERSION: D.BITTAN v1.0.1" />
                 <ScrambleText text="LOCATION: MALAGA, SPAIN" />
                 <p>--------------------------------------------------</p>
-                <br />
-                <ScrambleText text=">> ACCESSING PERSONNEL RECORDS…" />
-                <ScrambleText text=">> LOADING [ ██████████ ] 100%" />
               </header>
               <div className="w-fit h-1/2 mt-2 text-3xl flex gap-8">
                 <button className={buttonClasses} onClick={() => setAboutTopic("About Me")}>[  ABOUT ME  ]</button>
@@ -46,12 +44,18 @@ export default function About() {
                 <button className={buttonClasses} onClick={() => setAboutTopic("Playground")}>[  PLAYGROUND  ]</button>
               </div>
             </div>
-            {aboutTopic === "About Me" && <div className="w-full mt-14 uppercase text-start flex justify-between items-end gap-4 ">
-              <div className="w-full text-2xl flex flex-col justify-between">
-                <ScrambleText text="USER PROFILE: DANIEL BITTAN" classes="mb-4" />
-                <ScrambleText text="ROLE: FULL STACK WEB DEVELOPER (JUNIOR)" classes="mb-4" />
-                <ScrambleText text="FOCUS: LARAVEL | REACT | MYSQL | TAILWINDCSS | GIT OPS" classes="mb-4" />
-                <ScrambleText text="FOCUS: LARAVEL | REACT | MYSQL | TAILWINDCSS | GIT OPS" classes="mb-4" />
+            {aboutTopic === "About Me" && <div className="w-full mb-6 uppercase text-start ">
+              <div className="w-full text-2xl">
+                {aboutText.map((text, index) =>
+                  <ScrambleText key={index} text={text} classes="mb-5  " />
+                )}
+              </div>
+            </div>}
+            {aboutTopic === "Studies" && <div className="w-full mt-14 uppercase text-start flex justify-between items-end gap-4 ">
+              <div className="w-full text-2xl flex flex-col">
+                {aboutText.map((text, index) =>
+                  <ScrambleText key={index} text={text} classes="mb-3  " />
+                )}
               </div>
             </div>}
           </div>
