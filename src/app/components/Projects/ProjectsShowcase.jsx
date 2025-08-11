@@ -2,7 +2,7 @@ import projectData from "@/data/project-data.json";
 import Image from "next/image";
 
 export default function ProjectShowcase(prop) {
-  /*   const projectName = prop.project; */
+
 
   /* const DefaultView = (
     <div id="showcase-container"></div>
