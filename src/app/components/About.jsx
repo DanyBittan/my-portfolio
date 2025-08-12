@@ -4,14 +4,36 @@ import ScrambleText from "./ScrambleText";
 import { useInView } from "react-intersection-observer";
 
 
+
 export default function About() {
   const [animationEnd, setAnimationEnd] = useState(false);
   const [aboutTopic, setAboutTopic] = useState("About Me");
   const buttonClasses = "hover:text-pink-400 transition-all duration-100";
-  const aboutText = ["USER PROFILE: DANIEL BITTAN", "ROLE: FULL STACK WEB DEVELOPER (JUNIOR)", "FOCUS: LARAVEL | REACT | MYSQL | TAILWINDCSS | GIT OPS | DOCKER", "INTERESTS: COMICS | MOVIES | VIDEO GAMES | SPACE | AI", "OBJECTIVE: SEEKING CHALLENGING PROJECTS TO GROW AND CONTRIBUTE"]
+  const aboutText = ["USER PROFILE: DANIEL BITTAN", "ROLE: FULL STACK WEB DEVELOPER (JUNIOR)", "FOCUS: LARAVEL | REACT | MYSQL | TAILWINDCSS | GIT OPS | DOCKER", "INTERESTS: COMICS | MOVIES | VIDEO GAMES | SPACE | POETRY | AI", "OBJECTIVE: SEEKING CHALLENGING PROJECTS TO GROW AND CONTRIBUTE"]
   const { ref, inView } = useInView({
     triggerOnce: true, // solo se activa una vez
   });
+  const renderSwitch = (topic) => {
+    switch (topic) {
+      case "Studies":
+        return (
+          <div className="w-1/2 h-1/2 m-4 flex justify-center items-center text-2xl border border-purple-600 rounded-md">
+            <span>aaaa</span>
+          </div>
+        );
+      case "Playground":
+        return <div>WORKING...</div>
+      default:
+        return (
+          <div className="w-full mb-4 uppercase text-start ">
+            <div className="w-full text-3xl">
+              {aboutText.map((text, index) =>
+                <ScrambleText key={index} text={text} classes="mb-4 " />
+              )}
+            </div>
+          </div>);
+    }
+  };
 
   return (
     <section
@@ -28,8 +50,8 @@ export default function About() {
             />
           </div>
         ) : (
-          <div id="aboutText" className=" w-full h-full px-10 py-2 relative flex flex-col justify-between items-start">
-            <div className="mt-8 w-full h-1/6">
+          <div id="aboutText" className=" w-full h-full px-10 py-2 relative flex flex-col items-start">
+            <div className="mt-8 w-full h-full">
               <header className="text-2xl text-start">
                 <ScrambleText text="BOOTING SYSTEM: DB-DEV OPS [OK]" />
                 <p>--------------------------------------------------</p>
@@ -38,27 +60,15 @@ export default function About() {
                 <ScrambleText text="LOCATION: MALAGA, SPAIN" />
                 <p>--------------------------------------------------</p>
               </header>
-              <div className="w-fit h-1/2 mt-2 text-3xl flex gap-8">
+              <div className="w-fit mt-6 text-3xl flex gap-8">
                 <button className={buttonClasses} onClick={() => setAboutTopic("About Me")}>[  ABOUT ME  ]</button>
                 <button className={buttonClasses} onClick={() => setAboutTopic("Studies")}>[  STUDIES  ]</button>
                 <button className={buttonClasses} onClick={() => setAboutTopic("Playground")}>[  PLAYGROUND  ]</button>
               </div>
             </div>
-            {aboutTopic === "About Me" && <div className="w-full mb-6 uppercase text-start ">
-              <div className="w-full text-2xl">
-                {aboutText.map((text, index) =>
-                  <ScrambleText key={index} text={text} classes="mb-5  " />
-                )}
-              </div>
-            </div>}
-            {aboutTopic === "Studies" && <div className="w-full mt-14 uppercase text-start flex justify-between items-end gap-4 ">
-              <div className="w-full text-2xl flex flex-col">
-                {aboutText.map((text, index) =>
-                  <ScrambleText key={index} text={text} classes="mb-3  " />
-                )}
-              </div>
-            </div>}
+            {renderSwitch(aboutTopic)}
           </div>
+
         )
         }
       </div >
