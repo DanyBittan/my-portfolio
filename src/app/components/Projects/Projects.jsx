@@ -1,7 +1,5 @@
 "use client";
 import ProjectShowcase from "./ProjectsShowcase";
-import { useState } from "react";
-import { Image } from 'next/image';
 export default function Projects() {
   return (
     <section
@@ -9,8 +7,7 @@ export default function Projects() {
       className="w-full h-screen flex justify-center items-center"
     >
       <div className="w-3/4 min-h-auto h-2/3 relative flex bg-white/20 z-10 gap-3 rounded-lg shadow-lg">
-        {/* <ProjectShowcase className="grid "/> */}
-        <div className="w-3/4 h-full bg-black p-16 border-purple-600 border-2 rounded-lg">aaa</div>
+        <ProjectShowcase classes="w-3/4 h-full bg-black p-16 border-purple-600 border-2 rounded-lg" projectName="DizManga" />
         <div className="w-full flex flex-col justify-center items-center gap-4">
           <div className="w-full h-full flex ">
             <div className="w-1/2 bg-white border-purple-600 border-2 rounded-l-2xl">aaa</div>
@@ -19,6 +16,7 @@ export default function Projects() {
           <div className="w-full h-full bg-white border-purple-600 border-2 rounded-2xl">aaa</div>
         </div>
       </div>
+
     </section>
   );
 }

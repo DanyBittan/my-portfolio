@@ -13,19 +13,14 @@ export default function About() {
   const { ref, inView } = useInView({
     triggerOnce: true, // solo se activa una vez
   });
+  // Si uso dos condicionales quitar el switch
   const renderSwitch = (topic) => {
     switch (topic) {
-      case "Studies":
-        return (
-          <div className="w-1/2 h-1/2 m-4 flex justify-center items-center text-2xl border border-purple-600 rounded-md">
-            <span>aaaa</span>
-          </div>
-        );
       case "Playground":
         return <div>WORKING...</div>
       default:
         return (
-          <div className="w-full mb-4 uppercase text-start ">
+          <div className="w-full mb-4 uppercase text-start">
             <div className="w-full text-3xl">
               {aboutText.map((text, index) =>
                 <ScrambleText key={index} text={text} classes="mb-4 " />
@@ -62,8 +57,8 @@ export default function About() {
               </header>
               <div className="w-fit mt-6 text-3xl flex gap-8">
                 <button className={buttonClasses} onClick={() => setAboutTopic("About Me")}>[  ABOUT ME  ]</button>
-                <button className={buttonClasses} onClick={() => setAboutTopic("Studies")}>[  STUDIES  ]</button>
-                <button className={buttonClasses} onClick={() => setAboutTopic("Playground")}>[  PLAYGROUND  ]</button>
+                {/* <button className={buttonClasses} onClick={() => setAboutTopic("Studies")}>[  STUDIES  ]</button> */}
+                <button className={`${buttonClasses} line-through`}/*  onClick={() => setAboutTopic("Playground")} */>[  PLAYGROUND  ]</button>
               </div>
             </div>
             {renderSwitch(aboutTopic)}

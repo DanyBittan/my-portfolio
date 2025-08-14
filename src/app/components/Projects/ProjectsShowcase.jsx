@@ -2,8 +2,19 @@ import projectData from "@/data/project-data.json";
 import Image from "next/image";
 
 export default function ProjectShowcase(prop) {
-
-
+  const project = projectData[prop.projectName];
+  console.log(project)
+  console.log(prop.projectName)
+  return (
+    <div className={`${prop.classes} text-white relative`}>
+      <Image
+        src={project.img}
+        alt="Dizmanga picture"
+        fill
+        className="object-cover object-center transition-all duration-500 rounded-lg"
+      />
+    </div>
+  );
   /* const DefaultView = (
     <div id="showcase-container"></div>
     <div className="justify-center items-center flex">
