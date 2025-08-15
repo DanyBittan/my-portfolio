@@ -8,10 +8,10 @@ export default function ProjectShowcase(prop) {
   return (
     <div className={`${prop.classes} text-white relative`}>
       <Image
-        src={project.img}
+        src={project?.img}
         alt="Dizmanga picture"
         fill
-        className="object-cover object-center transition-all duration-500 rounded-lg"
+        className={`object-cover object-center ${prop.imgStyle}`}
       />
     </div>
   );
