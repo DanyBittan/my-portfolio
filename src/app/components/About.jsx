@@ -8,7 +8,7 @@ import { useInView } from "react-intersection-observer";
 export default function About() {
   const [animationEnd, setAnimationEnd] = useState(false);
   const [aboutTopic, setAboutTopic] = useState("About Me");
-  const buttonClasses = "hover:text-pink-400 transition-all duration-100";
+  const buttonClasses = "hover:text-pink-400 transition-all duration-100 text-shadow shadow-pink-500";
   const aboutText = ["USER PROFILE: DANIEL BITTAN", "ROLE: FULL STACK WEB DEVELOPER (JUNIOR)", "FOCUS: LARAVEL | REACT | MYSQL | TAILWINDCSS | GIT OPS | DOCKER", "INTERESTS: COMICS | MOVIES | VIDEO GAMES | SPACE | POETRY | AI", "OBJECTIVE: SEEKING CHALLENGING PROJECTS TO GROW AND CONTRIBUTE"]
   const { ref, inView } = useInView({
     triggerOnce: true, // solo se activa una vez
@@ -55,7 +55,7 @@ export default function About() {
                 <ScrambleText text="LOCATION: MALAGA, SPAIN" />
                 <p>--------------------------------------------------</p>
               </header>
-              <div className="w-fit mt-6 text-3xl flex gap-8">
+              <div className="w-fit mt-6 text-3xl flex gap-8 ">
                 <button className={buttonClasses} onClick={() => setAboutTopic("About Me")}>[  ABOUT ME  ]</button>
                 {/* <button className={buttonClasses} onClick={() => setAboutTopic("Studies")}>[  STUDIES  ]</button> */}
                 <button className={`${buttonClasses} line-through`}/*  onClick={() => setAboutTopic("Playground")} */>[  PLAYGROUND  ]</button>
