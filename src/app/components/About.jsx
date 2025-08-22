@@ -21,7 +21,7 @@ export default function About() {
       default:
         return (
           <div className="w-full mb-4 uppercase text-start">
-            <div className="w-full text-3xl">
+            <div className="w-full text-[1.685rem]">
               {aboutText.map((text, index) =>
                 <ScrambleText key={index} text={text} classes="mb-4 " />
               )}
@@ -55,7 +55,7 @@ export default function About() {
                 <ScrambleText text="LOCATION: MALAGA, SPAIN" />
                 <p>--------------------------------------------------</p>
               </header>
-              <div className="w-fit mt-6 text-3xl flex gap-8 ">
+              <div className="w-fit mt-6 text-2xl flex gap-8 ">
                 <button className={buttonClasses} onClick={() => setAboutTopic("About Me")}>[  ABOUT ME  ]</button>
                 {/* <button className={buttonClasses} onClick={() => setAboutTopic("Studies")}>[  STUDIES  ]</button> */}
                 <button className={`${buttonClasses} line-through`}/*  onClick={() => setAboutTopic("Playground")} */>[  PLAYGROUND  ]</button>
