@@ -10,7 +10,7 @@ export default function About() {
   const [animationEnd, setAnimationEnd] = useState(false);
   const [aboutTopic, setAboutTopic] = useState("About Me");
   const buttonClasses = "hover:text-pink-400 transition-all duration-100 text-shadow shadow-pink-500";
-  const aboutText = ["USER PROFILE: DANIEL BITTAN", "ROLE: FULL STACK WEB DEVELOPER (JUNIOR)", "FOCUS: LARAVEL | REACT | MYSQL | TAILWINDCSS | GIT OPS | DOCKER", "INTERESTS: COMICS | MOVIES | VIDEO GAMES | SPACE | POETRY | AI", "OBJECTIVE: SEEKING CHALLENGING PROJECTS TO GROW AND CONTRIBUTE"]
+  const aboutText = ["USER PROFILE: DANIEL BITTAN", "ROLE: FULL STACK WEB DEVELOPER (JUNIOR)", "FOCUS: LARAVEL | REACT | MYSQL | TAILWINDCSS | GIT OPS | DOCKER", "INTERESTS: COMICS | MOVIES | VIDEO GAMES | SPACE | POETRY | AI | CLIMBING", "OBJECTIVE: SEEKING CHALLENGING PROJECTS TO GROW AND CONTRIBUTE"]
   const { ref, inView } = useInView({
     triggerOnce: true, // solo se activa una vez
   });
@@ -18,12 +18,12 @@ export default function About() {
   const renderSwitch = (topic) => {
     switch (topic) {
       case "Projects":
-        return <Projects />;
+        return <Projects setAboutTopic={setAboutTopic} />;
       case "Playground":
         return <div>WORKING...</div>
       default:
         return (
-          <div className="w-full mb-4 uppercase text-start">
+          <div className="w-full mb-4 uppercase text-start px-6">
             <div className="w-full text-[1.685rem]">
               {aboutText.map((text, index) =>
                 <ScrambleText key={index} text={text} classes="mb-4 " />
@@ -38,7 +38,7 @@ export default function About() {
       id="aboutme"
       className="w-full h-screen flex justify-center items-center"
     >
-      <div ref={ref} className="crt w-3/5 h-3/4 bg-violet-950 border-2 border-purple-600 rounded-md relative text-shadow shadow-pink-500 text-pink-100 font-alien flex justify-center items-center">
+      <div ref={ref} className="crt w-2/3 h-3/4 bg-violet-950 border-2 border-purple-600 rounded-md relative text-shadow shadow-pink-500 text-pink-100 font-alien flex justify-center items-center">
         {!animationEnd && inView ? (
           <div className="w-full h-full p-4 flex justify-center items-center text-6xl">
             <ScrambleText
@@ -47,8 +47,8 @@ export default function About() {
             />
           </div>
         ) : (
-          <div id="aboutContent" className="w-full h-full px-10 py-2 relative flex flex-col items-start" >
-            <div className={`mt-8 w-full h-full ${aboutTopic === "Projects" && "hidden"}`}>
+          <div id="aboutContent" className="w-full h-full relative flex flex-col items-start" >
+            <div className={`mt-8 w-full px-8 py-2 h-full ${aboutTopic === "Projects" && "hidden"}`}>
               <header className="text-2xl text-start">
                 <ScrambleText text="BOOTING SYSTEM: DB-DEV OPS [OK]" />
                 <p>--------------------------------------------------</p>

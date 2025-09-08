@@ -2,26 +2,26 @@
 import ProjectShowcase from "./ProjectsShowcase";
 import { useState } from "react";
 
-export default function Projects() {
-  const [openProject, setOpenProject] = useState(null);
+export default function Projects(props) {
+  const [openProject, setOpenProject] = useState("");
   console.log(openProject)
   return (
-    <section
+    <div
       id="projects"
       className="w-full h-screen flex justify-center items-center"
     >
-      <div className="w-3/4 min-h-auto h-2/3 relative flex z-10 gap-4 text-shadow-lg shadow-pink-400 text-pink-100">
-        <ProjectShowcase classes={`${openProject ? "w-full" : "w-3/4"} w-3/4 h-full border-purple-600 border-2`} openProject={openProject} setOpenProject={setOpenProject} projectName="DizManga" />
-        <div className="w-full flex flex-col justify-center items-center gap-4">
-          <div className="w-full h-full flex ">
-            <ProjectShowcase classes="w-1/2 border-purple-600 border-2" openProject={openProject} setOpenProject={setOpenProject} projectName="Timer" />
-            <ProjectShowcase classes="w-1/2 border-purple-600 border-2" openProject={openProject} setOpenProject={setOpenProject} projectName="Calculator" />
-          </div>
-          <div className="relative w-full h-full bg-purple-950 border-purple-600 border-2 font-alien">
-            <p className="w-full h-full crt flex justify-center items-center text-8xl tracking-widest">PROJECTS</p></div>
+      <button onClick={!openProject ? () => props.setAboutTopic("") : () => setOpenProject("")} className="w-auto h-auto rounded-full text-2xl bg-purple-800 absolute top-4 left-4 px-2 py-1 z-20 text-shadow-lg shadow-pink-400 text-pink-100 font-rocket  ">&lt;=</button>
+      {!openProject
+        ? <div className="w-full min-h-auto h-full relative flex z-10 text-shadow-lg shadow-pink-400 text-pink-100 ">
+          <ProjectShowcase classes="w-3/4 h-full border-r-2 border-purple-600" setOpenProject={setOpenProject} projectName="DizManga" />
+          <div className="w-full flex flex-col justify-center items-center gap-4">
+            <div className="w-full h-full flex border-b-2 border-purple-600">
+              <ProjectShowcase classes="w-1/2 h-full" setOpenProject={setOpenProject} projectName="Timer" />
+              <ProjectShowcase classes="w-1/2 h-full" setOpenProject={setOpenProject} projectName="Calculator" />
+            </div>
+            <p className="w-full h-full flex justify-center items-center text-7xl tracking-widest">PROJECTS</p></div>
         </div>
-      </div>
-
-    </section >
+        : <ProjectShowcase classes="w-full h-full" setOpenProject={setOpenProject} projectName={openProject} />}
+    </div >
   );
 }

@@ -4,11 +4,12 @@ import InfoIcon from "../Icons/InfoIcon";
 
 export default function ProjectShowcase(prop) {
   const project = projectData[prop.projectName];
+  console.log(prop);
   return (
-    <div className={` ${prop.classes} text-white relative transition-all duration-200 `}>
+    <div className={` ${prop.classes} text-white relative transition-all duration-200`}>
       {project.img && (<Image
         src={project?.img}
-        alt="Dizmanga picture"
+        alt="Project Image"
         fill
         priority
         className={`object-cover object-center absolute z-0`}

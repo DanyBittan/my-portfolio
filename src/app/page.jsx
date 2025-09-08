@@ -10,7 +10,6 @@ export default function Home() {
       {/* <header className="fixed w-full h-16 blur-sm bg-black/50 t-0 z-10"></header> */}
       <SynthIntro></SynthIntro>
       <About></About>
-      <Projects></Projects>
     </main>
   );
 }
