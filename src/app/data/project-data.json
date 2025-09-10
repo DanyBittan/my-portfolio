@@ -12,12 +12,14 @@
             "MySQL"
         ]
     },
-    "Calculator": {
-        "description": "Basic and scientific calculator for some quick maths",
-        "img": "",
+    "Medicine Search": {
+        "description": "Search for drugs and their information",
+        "img": "/Pictures/DrugSearch.png",
         "language": [
+            "React",
             "Javascript",
             "CSS",
+            "MaterialUI",
             "HTML"
         ]
     },

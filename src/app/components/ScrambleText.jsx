@@ -13,7 +13,7 @@ export default function ScrambleText(props) {
     overdrive: 126,
     onAnimationEnd: () =>
       props.setAnimation && setTimeout(() => {
-        props.setAnimation(true);
+        props.setAnimation(prev => !prev);
       }, 1000)
     ,
   }
