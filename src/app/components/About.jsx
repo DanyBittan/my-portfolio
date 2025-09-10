@@ -38,7 +38,7 @@ export default function About() {
       id="aboutme"
       className="w-full h-screen flex justify-center items-center"
     >
-      <div ref={ref} className="crt w-3/4 h-3/4 bg-violet-950 border-2 border-purple-600 relative text-shadow shadow-pink-500 text-pink-100 font-alien flex justify-center items-center">
+      <div ref={ref} className="crt w-3/4 h-3/4 bg-violet-950 border-2 border-purple-600 rounded-md relative text-shadow shadow-pink-500 text-pink-100 font-alien flex justify-center items-center">
         {!animationEnd && inView ? (
           <div className="w-full h-full p-4 flex justify-center items-center text-6xl">
             <ScrambleText
@@ -60,7 +60,7 @@ export default function About() {
               <div className="w-fit mt-6 text-2xl flex gap-8 ">
                 <button className={buttonClasses} onClick={() => setAboutTopic("About Me")}>[  ABOUT ME  ]</button>
                 <button className={buttonClasses} onClick={() => setAboutTopic("Projects")}>[  PROJECTS  ]</button>
-                <button className={`${buttonClasses} line-through`} onClick={() => setAboutTopic("Playground")}>[  PLAYGROUND  ]</button>
+                <button className={`${buttonClasses} line-through`} /* onClick={() => setAboutTopic("Playground")} */>[  PLAYGROUND  ]</button>
               </div>
             </div>
             {renderSwitch(aboutTopic)}

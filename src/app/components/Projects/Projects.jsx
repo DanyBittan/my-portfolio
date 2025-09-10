@@ -12,7 +12,7 @@ export default function Projects(props) {
       id="projects"
       className="w-full h-screen flex justify-center items-center"
     >
-      <button onClick={!openProject ? () => props.setAboutTopic("") : () => setOpenProject("")} className="w-auto h-auto rounded-full text-2xl bg-purple-800 absolute top-4 left-4 px-2 py-1 z-20 text-shadow-lg shadow-pink-400 text-pink-100 font-rocket ">&lt;=</button>
+      <button onClick={!openProject ? () => props.setAboutTopic("") : () => setOpenProject("")} className="w-auto h-auto text-2xl bg-purple-800 absolute top-4 left-4 px-2 py-1 z-20 text-shadow-lg shadow-pink-500 text-pink-100 font-rocket shadow-sm">&lt;=</button>
       {loadingProjects
         ? <div className="w-full h-full p-4 flex justify-center items-center text-5xl"><ScrambleText text="LOADING PROJECTS" setAnimation={setLoadingProjects} /></div>
         :

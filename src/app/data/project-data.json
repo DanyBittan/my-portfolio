@@ -15,6 +15,7 @@
     "Medicine Search": {
         "description": "Search for drugs and their information",
         "img": "/Pictures/DrugSearch.png",
+        "url": "https://prueba-tecnica-jaraxa-5a313zuh3-daniels-projects-2d2e73d1.vercel.app",
         "language": [
             "React",
             "Javascript",
