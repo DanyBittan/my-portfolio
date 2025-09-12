@@ -1,7 +1,7 @@
 {
     "DizManga": {
         "description": "Comic book and manga library store",
-        "img": "/Pictures/DizManga.png",
+        "img": "/pictures/DizManga.png",
         "language": [
             "Laravel",
             "PHP",
@@ -15,7 +15,7 @@
     },
     "Medicine Search": {
         "description": "Search for drugs and their information",
-        "img": "/Pictures/DrugSearch.png",
+        "img": "/pictures/DrugSearch.png",
         "language": [
             "React",
             "Javascript",
@@ -28,7 +28,7 @@
     },
     "Timer": {
         "description": "Simple and practical timer",
-        "img": "/Pictures/Timer.png",
+        "img": "/pictures/Timer.png",
         "language": [
             "React",
             "Javascript",
