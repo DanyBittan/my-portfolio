@@ -14,7 +14,7 @@ export default function ScrambleText(props) {
     onAnimationEnd: () =>
       props.setAnimation && setTimeout(() => {
         props.setAnimation(prev => !prev);
-      }, 1000)
+      }, 800)
     ,
   }
   );

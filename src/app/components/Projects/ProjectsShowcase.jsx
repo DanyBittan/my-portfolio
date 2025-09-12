@@ -6,6 +6,7 @@ export default function ProjectShowcase(prop) {
   const projectName = prop.projectName;
   const project = projectData[projectName];
   const isOpen = prop.openProject
+  console.log(project)
   return (
     <div className={` ${prop.classes} text-white relative transition-all duration-200 ${!isOpen && "cursor-pointer"}`} {...(!isOpen && { onClick: () => prop.setOpenProject(projectName) })}>
       {project.img && (<Image
@@ -29,6 +30,11 @@ export default function ProjectShowcase(prop) {
           <h1>{projectName}</h1>
         </div>
       }
+      {isOpen &&
+        <div className="w-1/5 h-14 absolute top-4 right-4 flex justify-end items-center gap-3 text-2xl">
+          {project?.url && <a href={project.url} target="_blank" rel="noopener noreferrer" className="w-1/2 h-full flex justify-center items-center border shadow-md shadow-pink-900  border-purple-800 bg-purple-950 hover:bg-purple-800 transition-all duration-200">TRY IT!</a>}
+          <a href={project.github} target="_blank" rel="noopener noreferrer" className="w-1/2 h-full flex justify-center items-center border shadow-md shadow-pink-900 border-purple-800 bg-purple-950 hover:bg-purple-700 transition-all duration-200">Code</a>
+        </div>}
     </div >
   );
 }

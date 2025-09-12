@@ -24,7 +24,7 @@ export default function Projects(props) {
                 <ProjectShowcase classes="w-1/2 h-full border-r-2 border-purple-600" setOpenProject={setOpenProject} projectName="Timer" />
                 <ProjectShowcase classes="w-1/2 h-full" setOpenProject={setOpenProject} projectName="Medicine Search" />
               </div>
-              <p className="w-full h-full flex justify-center items-center text-7xl tracking-widest">PROJECTS</p></div>
+              <p className="w-full h-3/4 flex justify-center items-center text-7xl tracking-widest">PROJECTS</p></div>
           </div>
           : <ProjectShowcase classes="w-full h-full" openProject={openProject} setOpenProject={setOpenProject} projectName={openProject} />}
 
