@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
   width: 100%;
-  
+
 }
+
 @font-face {
   font-family: "Rocket";
   src: url("/Fonts/rocketFont.otf") format("opentype");
@@ -31,30 +32,4 @@ body{
   100% {
     background-position: 0% 100%;
   }
-}
-
-.projects-bg {
-  background: linear-gradient(to bottom,
-      transparent 0%,
-      transparent 40%,
-      #db2777 65%,
-      #360063 75%)
-}
-
-li {
-  position: relative;
-  padding-left: 10px;
-  transition: 0.3s;
-}
-
-li:hover {
-  font-size: 1.8rem;
-  background-color: inherit;
-  color: white;
-  border-radius: 2em;
-  padding-inline: 20px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  border-left: 0.5em solid rgb(255, 174, 0);
-  border-right: 0.5em solid rgb(255, 174, 0);
 }

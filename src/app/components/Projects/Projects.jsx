@@ -12,9 +12,9 @@ export default function Projects(props) {
       id="projects"
       className="w-full h-screen flex justify-center items-center"
     >
-      <button onClick={!openProject ? () => props.setAboutTopic("") : () => setOpenProject("")} className="w-auto h-auto text-2xl bg-purple-800 absolute top-4 left-4 px-2 py-1 z-20 text-shadow-lg shadow-pink-500 text-pink-100 font-rocket shadow-sm">&lt;=</button>
+      <button onClick={!openProject ? () => props.setAboutTopic("") : () => setOpenProject("")} className="w-auto h-auto text-2xl bg-purple-900 hover:bg-purple-800 transition-all duration-200 absolute top-4 left-4 px-4 py-2 z-20 text-shadow-lg shadow-pink-500 text-pink-100 font-rocket shadow-sm">&lt;</button>
       {loadingProjects
-        ? <div className="w-full h-full p-4 flex justify-center items-center text-5xl"><ScrambleText text="LOADING PROJECTS" setAnimation={setLoadingProjects} /></div>
+        ? <div className="w-full h-full p-4 flex justify-center items-center text-2xl sm:text-4xl"><ScrambleText text="LOADING PROJECTS" setAnimation={setLoadingProjects} /></div>
         :
         !openProject
           ? <div className=" w-full min-h-auto h-full relative flex z-10 text-shadow-lg shadow-pink-400 text-pink-100 ">
@@ -24,7 +24,7 @@ export default function Projects(props) {
                 <ProjectShowcase classes="w-1/2 h-full border-r-2 border-purple-600" setOpenProject={setOpenProject} projectName="Timer" />
                 <ProjectShowcase classes="w-1/2 h-full" setOpenProject={setOpenProject} projectName="Medicine Search" />
               </div>
-              <p className="w-full h-3/4 flex justify-center items-center text-7xl tracking-widest">PROJECTS</p></div>
+              <p className="w-full h-3/4 hidden lg:flex justify-center items-center text-7xl tracking-widest">PROJECTS</p></div>
           </div>
           : <ProjectShowcase classes="w-full h-full" openProject={openProject} setOpenProject={setOpenProject} projectName={openProject} />}
 
