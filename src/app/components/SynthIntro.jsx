@@ -8,10 +8,10 @@ export default function SynthIntro() {
     >
       {/* Usar el background como color del texto */}
       <div className="synthTitle w-full font-rocket relative flex ">
-        <h1 className="synthTitle text-[1.9rem] xs:text-[2.5rem]  lg:text-[8rem] 2xl:text-[10rem] absolute top-1">
+        <h1 className="synthTitle text-[1.9rem] xs:text-[2.5rem] sm:text-[3.9rem] md:text-[4.8rem] lg:text-[6.2rem] 2xl:text-[10rem] absolute top-1">
           DANIEL BITTAN
         </h1>
-        <h1 className=" text-[#ca2673] text-[1.92rem] xs:text-[2.52rem] lg:text-[8.1rem] 2xl:text-[10.1rem]">
+        <h1 className=" text-[#ca2673] text-[1.92rem] xs:text-[2.52rem] sm:text-[3.92rem] md:text-[4.82rem] lg:text-[6.22rem] 2xl:text-[10.1rem]">
           DANIEL BITTAN
         </h1>
         {/* Añadir animación que venga desde el fondo (Profundidad) */}

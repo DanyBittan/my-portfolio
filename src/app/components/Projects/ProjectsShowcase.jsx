@@ -26,7 +26,7 @@ export default function ProjectShowcase(prop) {
             )}
           </div>
         </div>
-        : <div className="w-full h-auto py-3 bottom-0 bg-purple-950 border-t-2 border-purple-600 absolute flex justify-center items-center text-3xl z-10">
+        : <div className="w-full h-auto py-3 bottom-0 bg-gradient-to-t from-purple-950 via-purple-900 to-white/0 lg:bg-purple-950 lg:border-t-2 border-purple-600 absolute flex justify-center items-center text-3xl z-10">
           <h1>{projectName}</h1>
         </div>
       }

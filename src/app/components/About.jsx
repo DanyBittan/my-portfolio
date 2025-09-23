@@ -10,12 +10,10 @@ export default function About() {
   const [animationEnd, setAnimationEnd] = useState(false);
   const [aboutTopic, setAboutTopic] = useState("About Me");
   const buttonClasses = (topic) =>
-    `transition-all duration-200 text-shadow 
-   px-2 sm:px-4 py-1 
-   hover:text-pink-400 hover:scale-105 
+    `transition-all duration-200 bg-purple-950 w-fit h-9 hover:text-pink-400 content-end pl-3 pr-10 rounded-tl-md rounded-t-3xl text-xl cursor-pointer 
    ${aboutTopic === topic
-      ? "text-pink-400 animate-pulse"
-      : "text-pink-200"
+      ? "text-purple-300 opacity-100"
+      : "text-pink-200 opacity-60 hover:opacity-100"
     }`;
   const aboutText = ["USER PROFILE ==> DANIEL BITTAN", "ROLE ==> FULL STACK WEB DEVELOPER (JUNIOR)", "FOCUS ==> LARAVEL | REACT | MYSQL | TAILWINDCSS | GIT OPS | DOCKER", "INTERESTS ==> COMICS | MOVIES | VIDEO GAMES | SPACE | POETRY | AI | CLIMBING", "OBJECTIVE ==> SEEKING CHALLENGING PROJECTS TO GROW AND CONTRIBUTE"]
   const { ref, inView } = useInView({
@@ -45,47 +43,40 @@ export default function About() {
       id="aboutme"
       className="w-full h-screen flex justify-center items-center"
     >
-      <div ref={ref} className="crt w-full lg:w-3/4 h-3/4 bg-violet-950 border-2 border-purple-600 lg:rounded-md relative text-shadow shadow-pink-500 text-pink-100 font-alien flex justify-center items-center">
-        {!animationEnd && inView ? (
-          <div className="w-full h-full p-4 flex justify-center items-center text-3xl">
-            <ScrambleText
-              text="Booting up..."
-              setAnimation={setAnimationEnd}
-            />
-          </div>
-        ) : (
-          <div id="aboutContent" className="w-full h-full relative flex flex-col items-start" >
-            <div className={`mt-8 w-full px-8 py-2 h-full ${aboutTopic === "Projects" && "hidden"}`}>
-              <header className="text-md lg:text-xl xl:text-2xl text-start">
-                <ScrambleText text="BOOTING SYSTEM: DB-DEV OPS [OK]" />
-                <p>--------------------------------------------------</p>
-                <ScrambleText text="INITIATING PERSONAL MODULE... [LOADED]" />
-                <ScrambleText text="VERSION: D.BITTAN v1.0.1" />
-                <ScrambleText text="LOCATION: MALAGA, SPAIN" />
-                <p>--------------------------------------------------</p>
-              </header>
-              <div className="w-full mt-6 text-lg sm:text-2xl md:text-3xl flex gap-6 md:gap-4 lg:gap-8">
-                <button
-                  className={buttonClasses("About Me")}
-                  onClick={() => setAboutTopic("About Me")}
-                >
-                  [ ABOUT ME ]
-                </button>
-                <button
-                  className={buttonClasses("Projects")}
-                  onClick={() => setAboutTopic("Projects")}
-                >
-                  [ PROJECTS ]
-                </button>
-              </div>
-              {/* <button className={`${buttonClasses} line-through  lg:visible`} onClick={() => setAboutTopic("Playground")}>[  PLAYGROUND  ]</button> */}
-            </div>
-            {renderSwitch(aboutTopic)}
-          </div>
+      <div className="crt w-full lg:w-3/4  h-3/4 overflow-hidden bg-violet-950 border-2 border-purple-600 relative text-shadow shadow-pink-500 text-pink-100 font-alien ">
+        <div className="w-full h-12 bg-purple-800 border-b-2 border-purple-800 flex items-end font-rocket ">
+          <div id="about-tab" className={`${buttonClasses("About Me")} ml-2`} onClick={() => setAboutTopic("About Me")}>About Me</div>
+          <div id="projects-tab" className={`${buttonClasses("Projects")}`} onClick={() => setAboutTopic("Projects")}>Projects</div>
+        </div>
+        <div ref={ref} className="h-full flex justify-center items-center">
 
-        )
-        }
-      </div >
+          {!animationEnd && inView ? (
+            <div className="w-full h-full flex justify-center items-center text-3xl md:text-5xl lg:text-6xl">
+              <ScrambleText
+                text="Booting up..."
+                setAnimation={setAnimationEnd}
+              />
+            </div>
+          ) : (
+            <div id="aboutContent" className="w-full h-full relative flex flex-col items-start" >
+              <div className={`mt-5 w-full px-8 py-2 h-auto ${aboutTopic === "Projects" && "hidden"}`}>
+                <header className="text-md lg:text-xl xl:text-2xl text-start">
+                  <ScrambleText text="BOOTING SYSTEM: DB-DEV OPS [OK]" />
+                  <p>--------------------------------------------------</p>
+                  <ScrambleText text="INITIATING PERSONAL MODULE... [LOADED]" />
+                  <ScrambleText text="VERSION: D.BITTAN v1.0.1" />
+                  <ScrambleText text="LOCATION: MALAGA, SPAIN" />
+                  <p>--------------------------------------------------</p>
+                </header>
+              </div>
+              {renderSwitch(aboutTopic)}
+            </div>
+
+          )
+          }
+        </div >
+      </div>
+
     </section >
   );
 }
