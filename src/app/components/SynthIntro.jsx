@@ -49,7 +49,7 @@ export default function SynthIntro() {
         <div className='w-full h-auto flex flex-col justify-center items-center gap-4 text-lg sm:text-xl md:text-2xl lg:text-4xl mt-20'>
           <span className='bg-gradient-to-b bg-clip-text from-[#ffd319] via-[#ff901f] to-[#ff2975]'>See more about me</span>
           <a href="#aboutme" className="relative flex justify-center items-center">
-            <span className="absolute inline-flex h-full w-full rounded-full bg-pink-500 opacity-75 animate-ping"></span>
+            <span className="absolute inline-flex h-full w-full rounded-full bg-pink-500 opacity-75"></span>
             <IconArrowBadgeDown
               stroke={1}
               width={50}

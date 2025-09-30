@@ -10,7 +10,7 @@ export default function Projects(props) {
   return (
     <div
       id="projects"
-      className="w-full h-screen flex justify-center items-center"
+      className="w-full h-full flex justify-center items-center"
     >
       <button onClick={!openProject ? () => props.setAboutTopic("About Me") : () => setOpenProject("")} className="w-auto h-auto text-2xl bg-purple-900 hover:bg-purple-800 transition-all duration-200 absolute top-4 left-4 px-4 py-2 z-20 text-shadow-lg shadow-pink-500 text-pink-100 font-rocket shadow-sm">&lt;</button>
       {loadingProjects
@@ -18,7 +18,7 @@ export default function Projects(props) {
         :
         !openProject
           ? <div className=" w-full min-h-auto h-full relative flex flex-col lg:flex-row z-10 text-shadow-lg shadow-pink-400 text-pink-100 ">
-            <ProjectShowcase classes="w-full h-1/3 lg:h-full border-b-2 lg:border-r-2 border-purple-600" setOpenProject={setOpenProject} projectName="DizManga" />
+            <ProjectShowcase classes="w-full h-1/3 lg:h-full lg:border-r-2 border-purple-600" setOpenProject={setOpenProject} projectName="DizManga" />
             <ProjectShowcase classes="w-full h-1/3 border-b-2 lg:border-r-2 border-purple-600 lg:hidden" setOpenProject={setOpenProject} projectName="Timer" />
             <ProjectShowcase classes="w-full h-1/3 lg:hidden" setOpenProject={setOpenProject} projectName="Medicine Search" />
             <div className="w-full flex-col justify-center items-center gap-4 hidden lg:flex">

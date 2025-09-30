@@ -8,7 +8,7 @@ export default function ProjectShowcase(prop) {
   const isOpen = prop.openProject
   console.log(project)
   return (
-    <div className={` ${prop.classes} text-white relative transition-all duration-200 ${!isOpen && "cursor-pointer"}`} {...(!isOpen && { onClick: () => prop.setOpenProject(projectName) })}>
+    <div className={` ${prop.classes} text-white relative transition-all border-t-2 border-purple-600 duration-200 ${!isOpen && "cursor-pointer"}`} {...(!isOpen && { onClick: () => prop.setOpenProject(projectName) })}>
       {project.img && (<Image
         src={project?.img}
         alt="Project Image"

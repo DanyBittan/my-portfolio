@@ -10,10 +10,10 @@ export default function About() {
   const [animationEnd, setAnimationEnd] = useState(false);
   const [aboutTopic, setAboutTopic] = useState("About Me");
   const buttonClasses = (topic) =>
-    `transition-all duration-200 bg-purple-950 w-fit h-9 hover:text-pink-400 content-end pl-3 pr-10 rounded-tl-md rounded-t-3xl text-xl cursor-pointer 
+    `transition-all duration-200 bg-purple-950 w-fit h-9 hover:text-pink-400 content-end pl-3 pr-10 rounded-tl-md rounded-t-3xl md:text-xl lg:text-2xl cursor-pointer 
    ${aboutTopic === topic
-      ? "text-purple-300 opacity-100"
-      : "text-pink-200 opacity-60 hover:opacity-100"
+      ? "text-purple-300 opacity-100 border-x-2 border-t-2 border-purple-600"
+      : "text-pink-200 opacity-40 hover:opacity-100"
     }`;
   const aboutText = ["USER PROFILE ==> DANIEL BITTAN", "ROLE ==> FULL STACK WEB DEVELOPER (JUNIOR)", "FOCUS ==> LARAVEL | REACT | MYSQL | TAILWINDCSS | GIT OPS | DOCKER", "INTERESTS ==> COMICS | MOVIES | VIDEO GAMES | SPACE | POETRY | AI | CLIMBING", "OBJECTIVE ==> SEEKING CHALLENGING PROJECTS TO GROW AND CONTRIBUTE"]
   const { ref, inView } = useInView({
@@ -29,7 +29,7 @@ export default function About() {
       default:
         return (
           <div className="w-full mb-2 sm:mb-4 uppercase text-start px-6">
-            <div className="w-full text-md lg:text-2xl xl:text-[1.685rem]">
+            <div className="w-full text-md lg:text-xl xl:text-[1.4rem]">
               {aboutText.map((text, index) =>
                 <ScrambleText key={index} text={text} classes="mb-2 md:mb-4" />
               )}
@@ -43,12 +43,12 @@ export default function About() {
       id="aboutme"
       className="w-full h-screen flex justify-center items-center"
     >
-      <div className="crt w-full lg:w-3/4  h-3/4 overflow-hidden bg-violet-950 border-2 border-purple-600 relative text-shadow shadow-pink-500 text-pink-100 font-alien ">
+      <div className="crt w-full lg:w-3/4  h-4/5 md:h-3/4 overflow-hidden bg-violet-950 border-2 border-purple-600 relative text-shadow shadow-pink-500 text-pink-100 font-alien rounded-md">
         <div className="w-full h-12 bg-purple-800 border-b-2 border-purple-800 flex items-end font-rocket ">
           <div id="about-tab" className={`${buttonClasses("About Me")} ml-2`} onClick={() => setAboutTopic("About Me")}>About Me</div>
           <div id="projects-tab" className={`${buttonClasses("Projects")}`} onClick={() => setAboutTopic("Projects")}>Projects</div>
         </div>
-        <div ref={ref} className="h-full flex justify-center items-center">
+        <div ref={ref} className="h-[calc(100%-3rem)] flex justify-center items-center">
 
           {!animationEnd && inView ? (
             <div className="w-full h-full flex justify-center items-center text-3xl md:text-5xl lg:text-6xl">
