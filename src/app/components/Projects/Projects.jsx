@@ -17,12 +17,12 @@ export default function Projects(props) {
         ? <div className="w-full h-full p-4 flex justify-center items-center text-2xl sm:text-4xl"><ScrambleText text="LOADING PROJECTS" setAnimation={setLoadingProjects} /></div>
         :
         !openProject
-          ? <div className=" w-full min-h-auto h-full relative flex flex-col lg:flex-row z-10 text-shadow-lg shadow-pink-400 text-pink-100 ">
-            <ProjectShowcase classes="w-full h-1/3 lg:h-full lg:border-r-2 border-purple-600" setOpenProject={setOpenProject} projectName="DizManga" />
-            <ProjectShowcase classes="w-full h-1/3 border-b-2 lg:border-r-2 border-purple-600 lg:hidden" setOpenProject={setOpenProject} projectName="Timer" />
-            <ProjectShowcase classes="w-full h-1/3 lg:hidden" setOpenProject={setOpenProject} projectName="Medicine Search" />
-            <div className="w-full flex-col justify-center items-center gap-4 hidden lg:flex">
-              <div className="w-full h-full flex border-b-2 border-purple-600 ">
+          ? <div className=" w-full min-h-auto h-full relative flex flex-col md:flex-row z-10 text-shadow-lg shadow-pink-400 text-pink-100 ">
+            <ProjectShowcase classes="w-full md:w-3/4 h-1/3 md:h-full md:border-r-2 border-purple-600" setOpenProject={setOpenProject} projectName="DizManga" />
+            <ProjectShowcase classes="w-full h-1/3 border-b-2 border-t-2 md:border-r-2 border-purple-600 md:hidden" setOpenProject={setOpenProject} projectName="Timer" />
+            <ProjectShowcase classes="w-full h-1/3 md:hidden" setOpenProject={setOpenProject} projectName="Medicine Search" />
+            <div className="w-full flex-col justify-center items-center gap-4 hidden md:flex">
+              <div className="w-full h-4/5 flex border-b-2 border-purple-600 ">
                 <ProjectShowcase classes="w-1/2 h-full border-r-2 border-purple-600" setOpenProject={setOpenProject} projectName="Timer" />
                 <ProjectShowcase classes="w-1/2 h-full" setOpenProject={setOpenProject} projectName="Medicine Search" />
               </div>

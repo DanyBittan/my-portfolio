@@ -27,6 +27,7 @@ module.exports = {
       fontFamily: {
         'rocket': ["Rocket", "sans-serif"],
         'alien': ["Alien", "sans-serif"],
+        'pixelify': ["Pixelify Sans", "sans-serif"],
       },
     },
   },
