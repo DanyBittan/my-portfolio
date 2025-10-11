@@ -19,5 +19,5 @@ export default function ScrambleText(props) {
   }
   );
 
-  return <p ref={ref} className={`${props.classes} text-white text-shadow shadow-pink-400`} />;
+  return <p ref={ref} className="text-white text-shadow shadow-pink-400" />;
 }

@@ -12,7 +12,6 @@ export default function Projects(props) {
       id="projects"
       className="w-full h-full flex justify-center items-center"
     >
-      <button onClick={!openProject ? () => props.setAboutTopic("About Me") : () => setOpenProject("")} className="w-auto h-auto text-2xl bg-purple-900 hover:bg-purple-800 transition-all duration-200 absolute top-4 left-4 px-4 py-2 z-20 text-shadow-lg shadow-pink-500 text-pink-100 font-rocket shadow-sm">&lt;</button>
       {loadingProjects
         ? <div className="w-full h-full p-4 flex justify-center items-center text-2xl sm:text-4xl"><ScrambleText text="LOADING PROJECTS" setAnimation={setLoadingProjects} /></div>
         :

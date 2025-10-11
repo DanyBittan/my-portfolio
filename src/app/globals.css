@@ -23,18 +23,18 @@ body {
 
 .crt {
   position: absolute;
-  background-image: linear-gradient(rgba(96, 0, 99, 0.26),
-      rgba(80, 0, 75, 0.192));
+  background-image: linear-gradient(rgba(107, 0, 102, 0.151),
+      rgba(143, 0, 133, 0.192));
   background-repeat: repeat;
-  background-size: 100vw 10vh;
-  animation: bgscroll 14s linear infinite;
+  background-size: 100vw 0.8vh;
+  /* animation: bgscroll 80s linear infinite; */
 }
 
-@keyframes bgscroll {
+/* @keyframes bgscroll {
   100% {
     background-position: 0% 100%;
   }
-}
+} */
 
 @keyframes go-movement {
   0% {
@@ -52,4 +52,38 @@ body {
 
 .go-animation {
   animation: go-movement 1s linear infinite;
+}
+
+.type-writting {
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+  animation: typing 4s steps(44) 1s 1 normal both;
+  animation-delay: 1200ms;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+.blinking-caret {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: rgb(253 186 116);
+  }
 }
