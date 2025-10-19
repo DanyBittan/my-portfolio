@@ -44,32 +44,10 @@ body {
   50% {
     transform: translateY(4px);
   }
-
-  10% {
-    transform: translateY(0px);
-  }
 }
 
 .go-animation {
   animation: go-movement 1s linear infinite;
-}
-
-.type-writting {
-  white-space: nowrap;
-  overflow: hidden;
-  margin: 0;
-  animation: typing 4s steps(44) 1s 1 normal both;
-  animation-delay: 1200ms;
-}
-
-@keyframes typing {
-  from {
-    width: 0
-  }
-
-  to {
-    width: 100%
-  }
 }
 
 .blinking-caret {

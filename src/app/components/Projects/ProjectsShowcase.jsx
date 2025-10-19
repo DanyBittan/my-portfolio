@@ -7,7 +7,7 @@ export default function ProjectShowcase(prop) {
   const project = projectData[projectName];
   const isOpen = prop.openProject
   return (
-    <div className={` ${prop.classes} text-white relative transition-all border-purple-600 duration-200 ${!isOpen && "cursor-pointer"}`} {...(!isOpen && { onClick: () => prop.setOpenProject(projectName) })}>
+    <div className={` ${prop.classes} text-white group relative transition-all overflow-hidden border-purple-600 duration-200 ${!isOpen && "cursor-pointer"}`} {...(!isOpen && { onClick: () => prop.setOpenProject(projectName) })}>
       <button onClick={() => prop.setOpenProject("")} className={`w-auto h-auto text-2xl bg-purple-900 hover:bg-purple-800 transition-all duration-200 absolute top-4 left-4 px-4 py-2 z-20 text-shadow-lg shadow-pink-500 text-pink-100 font-rocket shadow-sm ${!isOpen && "hidden"}`}>&lt;</button>
       {project.img && (<Image
         src={project?.img}
@@ -20,14 +20,14 @@ export default function ProjectShowcase(prop) {
         <div className="w-full h-2/6 bg-gradient-to-b from-white/0 via-purple-950 to-purple-950 absolute bottom-0 z-10 p-5">
           <h1 className="text-3xl md:text-5xl lg:text-6xl mb-5">{projectName}</h1>
           <p className="text-xl md:text-2xl lg:text-3xl">{project.description}</p>
-          <div className="w-full h-auto absolute bottom-6">
+          <div className="w-full h-auto absolute bottom-5">
             {project.language.map((lang, index) =>
-              <span key={index} className="text-2xl mr-3 border-2 border-purple-500 px-4 py-2 rounded-full shadow-sm shadow-purple-500">{lang}</span>
+              <span key={index} className="text-lg lg:text-2xl mr-3 border-2 border-purple-500 px-4 py-2 rounded-full shadow-sm shadow-purple-500">{lang}</span>
             )}
           </div>
         </div>
-        : <div className="w-full h-auto py-3 bottom-0 bg-gradient-to-t from-purple-950 via-purple-900 to-white/0 lg:bg-purple-950 lg:border-t-2 border-purple-600 absolute flex justify-center items-center text-2xl 2xl:text-3xl z-10">
-          <h1>{projectName}</h1>
+        : <div className="w-full h-auto py-2 px-4 bottom-0 bg-gradient-to-t translate-y-20 group-hover:translate-y-0 from-purple-950  via-purple-800/80 to-white/0 absolute transition-all duration-200 text-shadow-sm">
+          <h1 className="mb-3 text-2xl 2xl:text-4xl ">{projectName}</h1>
         </div>
       }
       {isOpen &&
