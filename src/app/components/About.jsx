@@ -43,7 +43,7 @@ export default function About() {
         </div>
         <div ref={ref} className="h-[calc(100%-3rem)] flex justify-center items-center">
 
-          {animationEnd && inView ? ( // "!animationEnd" al principio para que funcione
+          {!animationEnd && inView ? (
             <div className="w-full h-full flex justify-center items-center text-3xl md:text-5xl lg:text-6xl">
               <ScrambleText
                 text="Booting up..."
