@@ -36,7 +36,7 @@ export default function About() {
       id="aboutme"
       className="w-full h-screen flex justify-center items-center"
     >
-      <div className="crt w-full lg:w-3/4 h-4/5 overflow-hidden bg-violet-950 border-2 border-purple-600 relative text-shadow shadow-pink-500 text-pink-100 font-alien rounded-md">
+      <div className="crt w-full lg:w-4/5 h-[90%] md:h-4/5 overflow-hidden bg-violet-950 border-2 border-purple-600 relative text-shadow shadow-pink-500 text-pink-100 font-alien rounded-md">
         <div className="w-full h-12 bg-purple-800 border-b-2 border-purple-600 flex items-end font-rocket ">
           <div id="about-tab" className={`${buttonClasses("About Me")} ml-2`} onClick={() => setAboutTopic("About Me")}>About Me</div>
           <div id="projects-tab" className={`${buttonClasses("Projects")}`} onClick={() => setAboutTopic("Projects")}>Projects</div>

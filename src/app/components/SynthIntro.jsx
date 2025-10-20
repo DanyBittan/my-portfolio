@@ -13,7 +13,6 @@ export default function SynthIntro() {
         <h1 className=" text-[#ca2673] text-[1.92rem] xs:text-[2.52rem] sm:text-[3.92rem] md:text-[4.82rem] lg:text-[6.22rem] 2xl:text-[10.1rem]">
           DANIEL BITTAN
         </h1>
-        {/* Añadir animación que venga desde el fondo (Profundidad) */}
         <div className="relative w-full flex justify-center">
           <p className="subTitle text-[1.6rem] lg:text-[3rem] bg-clip-text absolute top-1">
             Software Developer
