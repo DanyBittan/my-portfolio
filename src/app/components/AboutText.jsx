@@ -27,7 +27,7 @@ export default function AboutText() {
                     <ScrambleText text="LOCATION: MALAGA, SPAIN" />
                 </div>
             </header>
-            <div className="h-fit flex flex-col gap-4 md:gap-6 text-md md:text-xl lg:text-2xl ">
+            <div className="h-auto flex flex-col gap-4 md:gap-6 text-md md:text-xl lg:text-2xl ">
                 <p className={`${displayedParagraph < 1 ? "hidden" : "visible"}`}>
                     Hey there, I’m Daniel Bittan Graells — a junior web developer who enjoys turning ideas into interactive experiences.
                     <br />
@@ -45,7 +45,7 @@ export default function AboutText() {
                         </div>
                     ))}
                 </div>
-                <div id='command_line' className="flex gap-2 h-7 mt-4">
+                <div id='command_line' className="flex gap-2 h-7 mt-4 absolute bottom-2">
                     <ScrambleText text="USERS@DANIEL BITTAN >" />
                     <div className="max-w-fit">
                         <TypeWriter texts={commandText} speed={150} delay={1200} setDisplayedParagraph={setDisplayedParagraph} />

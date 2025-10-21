@@ -30,11 +30,12 @@ export default function ProjectShowcase(prop) {
       {
         isOpen ?
           <div className="w-full h-auto bg-gradient-to-b from-purple-950/70 via-purple-900 to-purple-950 flex border-t-2 text-shadow-xs border-purple-600 flex-col gap-4 absolute bottom-0 z-10 p-5 backdrop-blur-md">
-            <h1 id="project-title" className={` text-4xl md:text-5xl lg:text-6xl text-purple-300 `}>{projectName}</h1>
+            <h1 id="project-title" className={` text-3xl md:text-4xl lg:text-5xl text-purple-300 underline`}>{projectName}</h1>
             <p className="text-lg md:text-2xl lg:text-3xl mt-2 text-purple-300">{project.description}</p>
-            <div className="w-full h-auto flex flex-wrap gap-2 md:gap-4">
+            <div className="w-full h-auto flex flex-wrap items-center gap-2 md:gap-4 text-md md:text-2xl">
+              <span>MADE WITH:</span>
               {project.language.map((lang, index) =>
-                <span key={index} className="text-md md:text-2xl border-2 border-purple-500 px-3 py-1 rounded-full shadow-sm shadow-purple-500">{lang}</span>
+                <span key={index} className=" border-2 border-purple-500 px-3 py-1 rounded-full shadow-sm shadow-purple-500">{lang}</span>
               )}
             </div>
           </div>

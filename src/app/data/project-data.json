@@ -14,7 +14,7 @@
         "github": "https://github.com/DanyBittan/DizManga"
     },
     "Medicine Search": {
-        "description": "Search for drugs and their information",
+        "description": "Search for drugs and their information using an external API, with a clean and responsive design.",
         "img": "/Pictures/DrugSearch.png",
         "language": [
             "React",
@@ -27,7 +27,7 @@
         "github": "https://github.com/DanyBittan/Prueba-Tecnica-Jaraxa"
     },
     "Timer": {
-        "description": "Simple and practical timer",
+        "description": "Simple and practical timer done as learning project using React and TailWindCSS.",
         "img": "/Pictures/Timer.png",
         "language": [
             "React",
