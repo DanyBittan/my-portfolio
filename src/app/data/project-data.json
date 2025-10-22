@@ -27,13 +27,14 @@
         "github": "https://github.com/DanyBittan/Prueba-Tecnica-Jaraxa"
     },
     "Store Finder": {
-        "description": "Store Finder is a web application designed to help users locate stores and points of interest nearby. Built using Vue, Tailwind CSS, and Node.js, it leverages the Google Maps API to provide accurate and real-time location data",
+        "description": "Store Finder is a web application designed to help users locate stores and points of interest nearby, providing accurate and real-time location data.",
         "img": "/Pictures/storefinder.png",
         "language": [
             "Vue",
             "Node.js",
             "TailWindCSS",
-            "TypeScript"
+            "TypeScript",
+            "Google Maps API"
         ],
         "url": "https://www.affenzahn.com/en/storefinder"
     }
