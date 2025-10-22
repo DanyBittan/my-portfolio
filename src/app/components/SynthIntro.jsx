@@ -7,12 +7,19 @@ export default function SynthIntro() {
       className="flex flex-col h-screen w-full items-center justify-evenly"
     >
       {/* Usar el background como color del texto */}
-      <div className="w-full flex justify-start absolute px-6 py-6 top-0 text-xl">
-        <div className="flex items-center gap-6 bg-black/70 border border-pink-600 px-6 py-3 rounded-md font-rocket text-pink-400 shadow-[0_0_15px_#ff00ff]">
-          <span>&gt; ACCESS:</span>
+      <div className="w-full flex justify-between absolute px-6 py-6 top-0 text-xl">
+        <div className="flex h-14 items-center gap-6 bg-purple-950/70 border border-pink-600 px-6 py-3 rounded-md font-rocket text-pink-400 shadow-[1px_1px_6px_#ff00ff]">
+          <span>&gt; &gt; ACCESS:</span>
           <a href="https://github.com/DanyBittan" target="_blank" className="hover:text-pink-300 transition-all">GITHUB</a>
           <a href="https://www.linkedin.com/in/danielbittangraells" target="_blank" className="hover:text-pink-300 transition-all">LINKEDIN</a>
-          <a href="#" className="hover:text-pink-300 transition-all">CV</a>
+        </div>
+        <div className="flex h-14  items-start gap-9 font-rocket text-pink-400 transition-all duration-300 ">
+          <span className='py-4 underline text-2xl'>&gt; &gt; Available:</span>
+          <div className="hover:text-pink-300 transition-all flex flex-col text-center group">
+            <span className='bg-purple-950/80 hover:bg-purple-900/70 rounded-lg pointer group-hover:rounded-b-none border border-pink-600 shadow-[0_0_6px_#ff00ff] px-6 py-3 z-10 cursor-cell'>Download my CV</span>
+            <a href="/CVs/Daniel Bittan Graells CV.pdf" download="Daniel_Bittan_Graells_CV_ES.pdf" type="application/pdf" target="_blank" rel="noopener noreferrer" className='opacity-0 -translate-y-10  hover:bg-purple-700 group-hover:opacity-100 group-hover:translate-y-0 transition-transform duration-300 py-3 z-0 bg-purple-900/90 border-x border-purple-600'>Spanish CV</a>
+            <a href="/CVs/Daniel Bittan Graells CV english.pdf" download="Daniel_Bittan_Graells_CV_EN.pdf" type="application/pdf" target="_blank" rel="noopener noreferrer" className='opacity-0 -translate-y-10 group-hover:opacity-100 hover:bg-purple-700 group-hover:translate-y-0 transition-transform duration-300 py-3 z-0 bg-purple-900/90 border border-purple-600 rounded-b-md'>English CV</a>
+          </div>
         </div>
       </div>
       <div className="synthTitle w-full font-rocket relative flex ">
