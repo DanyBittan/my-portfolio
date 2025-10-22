@@ -18,8 +18,8 @@ export default function AboutText() {
     }, [visibleSkills, displayedParagraph]);
 
     return (
-        <div className="w-full h-full mb-2 sm:mb-4 px-8 relative">
-            <header className=" w-full md:w-2/4 h-auto text-md lg:text-xl xl:text-2xl text-start mt-5 py-2 ">
+        <div className="w-full h-full mb-2 sm:mb-4 relative">
+            <header className=" w-full md:w-2/4 h-auto text-md lg:text-xl xl:text-2xl text-start mt-5 py-2 px-8">
                 <ScrambleText text="BOOTING SYSTEM: DB-DEV OPS [OK]" />
                 <div className="border-y-2 border-dashed border-purple-400 pb-2 mb-4 my-4 py-3">
                     <ScrambleText text="INITIATING PERSONAL MODULE... [LOADED]" />
@@ -27,7 +27,7 @@ export default function AboutText() {
                     <ScrambleText text="LOCATION: MALAGA, SPAIN" />
                 </div>
             </header>
-            <div className="h-auto flex flex-col gap-4 md:gap-6 text-md md:text-xl lg:text-2xl ">
+            <div className="h-auto flex flex-col gap-4 md:gap-6 text-md md:text-xl lg:text-2xl px-8 ">
                 <p className={`${displayedParagraph < 1 ? "hidden" : "visible"}`}>
                     Hey there, I’m Daniel Bittan Graells — a junior web developer who enjoys turning ideas into interactive experiences.
                     <br />
@@ -45,13 +45,13 @@ export default function AboutText() {
                         </div>
                     ))}
                 </div>
-                <div id='command_line' className="flex gap-2 h-7 mt-4 absolute bottom-2">
-                    <ScrambleText text="USERS@DANIEL BITTAN >" />
-                    <div className="max-w-fit">
-                        <TypeWriter texts={commandText} speed={150} delay={1200} setDisplayedParagraph={setDisplayedParagraph} />
-                    </div>
-                    <span className="blinking-caret border-b-4 w-4" />
+            </div>
+            <div id='command_line' className="flex pt-2 w-full gap-2 h-8 mt-4 absolute bottom-0 border-t-2 border-purple-500/40 text-md md:text-xl lg:text-2xl px-4">
+                <ScrambleText text="USERS@DANIEL BITTAN >" />
+                <div className="max-w-fit">
+                    <TypeWriter texts={commandText} speed={150} delay={1200} setDisplayedParagraph={setDisplayedParagraph} />
                 </div>
+                <span className="blinking-caret border-b-4 w-4" />
             </div>
         </div >
     )

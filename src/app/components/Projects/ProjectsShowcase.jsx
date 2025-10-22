@@ -14,7 +14,7 @@ export default function ProjectShowcase(prop) {
           <button onClick={() => prop.setOpenProject("")} className={`w-auto h-12 text-2xl bg-purple-900 hover:bg-purple-800 px-4 transition-all duration-200 text-shadow-lg shadow-pink-500 text-pink-100 font-rocket shadow-md`}>&lt;</button>
           <div className="w-1/2 md:1/4 h-14 flex justify-end items-center gap-3 text-xl md:text-2xl lg:text-3xl">
             {project?.url && <a href={project.url} target="_blank" rel="noopener noreferrer" className="w-1/2 sm:w-1/3 md:w-1/4 h-full flex justify-center items-center border shadow-md shadow-pink-900  border-purple-800 bg-purple-950 hover:bg-purple-800 transition-all duration-200">TRY IT!</a>}
-            <a href={project.github} target="_blank" rel="noopener noreferrer" className="w-1/2 sm:w-1/3 md:w-1/4 md:1/2 h-full flex justify-center items-center border shadow-md shadow-pink-900 border-purple-800 bg-purple-950 hover:bg-purple-700 transition-all duration-200">Code</a>
+            {project?.github && <a href={project.github} target="_blank" rel="noopener noreferrer" className="w-1/2 sm:w-1/3 md:w-1/4 md:1/2 h-full flex justify-center items-center border shadow-md shadow-pink-900 border-purple-800 bg-purple-950 hover:bg-purple-700 transition-all duration-200">Code</a>}
           </div>
         </div>
       }
