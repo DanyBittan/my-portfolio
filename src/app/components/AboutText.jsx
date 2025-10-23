@@ -19,7 +19,7 @@ export default function AboutText() {
 
     return (
         <div className="w-full h-full relative">
-            <header className=" w-full md:w-2/4 h-auto text-md lg:text-xl xl:text-2xl text-start mt-5 py-2 px-8">
+            <header className=" w-full md:w-2/4 h-auto text-md lg:text-xl xl:text-2xl text-start mt-5 py-2 px-6 md:px-8">
                 <ScrambleText text="BOOTING SYSTEM: DB-DEV OPS [OK]" />
                 <div className="border-y-2 border-dashed border-purple-400 pb-2 mb-4 my-4 py-3">
                     <ScrambleText text="INITIATING PERSONAL MODULE... [LOADED]" />
@@ -27,14 +27,14 @@ export default function AboutText() {
                     <ScrambleText text="LOCATION: MALAGA, SPAIN" />
                 </div>
             </header>
-            <div className="h-auto flex flex-col gap-4 md:gap-6 text-md md:text-lg lg:text-xl xl:text-2xl px-8 ">
+            <div className="h-auto flex flex-col gap-4 md:gap-6 text-md md:text-lg lg:text-xl xl:text-2xl px-6 md:px-8 ">
                 <p className={`${displayedParagraph < 1 ? "hidden" : "visible"}`}>
                     Hey there, I’m Daniel Bittan Graells — a junior web developer who enjoys turning ideas into interactive experiences.
                     <br />
                     I am a huge nerd for comics, video games, and technology in general.
                 </p>
                 <span className={`${displayedParagraph < 2 && "hidden"}`}>My technological stack :</span>
-                <div className={`${displayedParagraph < 2 ? "hidden" : "flex"} space-y-1 flex-col flex-wrap h-40 lg:h-44 overflow-y-auto`}>
+                <div className={`${displayedParagraph < 2 ? "hidden" : "flex"} space-y-1 flex-col flex-wrap h-36 lg:h-44 xl:h-52 overflow-y-auto`}>
 
                     {visibleSkills.map((skill, i) => (
                         <div
