@@ -39,7 +39,7 @@ export default function ProjectShowcase(prop) {
               )}
             </div>
           </div>
-          : <div className="w-full h-auto py-2 px-4 bottom-0 bg-gradient-to-t md:translate-y-20 md:group-hover:translate-y-0 from-purple-950  via-purple-800/80 to-white/0 absolute transition-all duration-200 text-shadow-sm">
+          : <div className="w-full h-auto py-2 px-4 bottom-0 bg-gradient-to-t lg:translate-y-20 lg:group-hover:translate-y-0 from-purple-950  via-purple-800/80 to-white/0 absolute transition-all duration-200 text-shadow-sm">
             <h1 className="mb-3 text-2xl 2xl:text-4xl ">{projectName}</h1>
           </div>
       }

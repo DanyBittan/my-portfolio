@@ -14,15 +14,15 @@ export default function SynthIntro() {
           <a href="https://www.linkedin.com/in/danielbittangraells" target="_blank" className="hover:text-pink-300 transition-all">LINKEDIN</a>
         </nav>
         <div className='flex w-4/5 sm:w-2/3 lg:hidden font-rocket text-pink-400 transition-all duration-300 bg-purple-950/90  rounded-b-lg cursor-pointer border border-pink-600 shadow-[0_2px_6px_#ff00ff] py-2 text-center'>
-          <a href="/CVs/Daniel Bittan Graells CV.pdf" download="Daniel_Bittan_Graells_CV_ES.pdf" type="application/pdf" target="_blank" rel="noopener noreferrer" className='border-r-2 border-pink-600 w-1/2 h-full' >Spanish CV</a>
-          <a href="/CVs/Daniel Bittan Graells CV english.pdf" download="Daniel_Bittan_Graells_CV_EN.pdf" type="application/pdf" target="_blank" rel="noopener noreferrer" className='w-1/2'>English CV</a>
+          <a href="/CVs/Daniel_Bittan_Graells_CV.pdf" download="Daniel_Bittan_Graells_CV_Es.pdf" type="application/pdf" target="_blank" rel="noopener noreferrer" className='border-r-2 border-pink-600 w-1/2 h-full' >Spanish CV</a>
+          <a href="/CVs/Daniel_Bittan_Graells_CV_Eng.pdf" download="Daniel_Bittan_Graells_CV_Eng.pdf" type="application/pdf" target="_blank" rel="noopener noreferrer" className='w-1/2'>English CV</a>
         </div>
         <div className="hidden lg:flex h-14  items-start gap-9 font-rocket text-pink-400 transition-all duration-300 ">
           <span className='py-4 underline text-2xl'>&gt; &gt; Available:</span>
           <div className="hover:text-pink-300 transition-all flex flex-col text-center group">
             <span className='bg-purple-950/80 hover:bg-purple-900/70 rounded-lg pointer group-hover:rounded-b-none border border-pink-600 shadow-[0_0_6px_#ff00ff] px-6 py-3 z-10 cursor-cell'>Download my CV</span>
-            <a href="/CVs/Daniel Bittan Graells CV.pdf" download="Daniel_Bittan_Graells_CV_ES.pdf" type="application/pdf" target="_blank" rel="noopener noreferrer" className='opacity-0 -translate-y-10  hover:bg-purple-700 group-hover:opacity-100 group-hover:translate-y-0 transition-transform duration-300 py-3 z-0 bg-purple-900/90 border-x border-purple-600'>Spanish CV</a>
-            <a href="/CVs/Daniel Bittan Graells CV english.pdf" download="Daniel_Bittan_Graells_CV_EN.pdf" type="application/pdf" target="_blank" rel="noopener noreferrer" className='opacity-0 -translate-y-10 group-hover:opacity-100 hover:bg-purple-700 group-hover:translate-y-0 transition-transform duration-300 py-3 z-0 bg-purple-900/90 border border-purple-600 rounded-b-md'>English CV</a>
+            <a href="/CVs/Daniel_Bittan_Graells_CV.pdf" download="Daniel_Bittan_Graells_CV_Es.pdf" type="application/pdf" target="_blank" rel="noopener noreferrer" className='opacity-0 -translate-y-10  hover:bg-purple-700 group-hover:opacity-100 group-hover:translate-y-0 transition-transform duration-300 py-3 z-0 bg-purple-900/90 border-x border-purple-600'>Spanish CV</a>
+            <a href="/CVs/Daniel_Bittan_Graells_CV_Eng.pdf" download="Daniel_Bittan_Graells_CV_Eng.pdf" type="application/pdf" target="_blank" rel="noopener noreferrer" className='opacity-0 -translate-y-10 group-hover:opacity-100 hover:bg-purple-700 group-hover:translate-y-0 transition-transform duration-300 py-3 z-0 bg-purple-900/90 border border-purple-600 rounded-b-md'>English CV</a>
           </div>
         </div>
       </header>
