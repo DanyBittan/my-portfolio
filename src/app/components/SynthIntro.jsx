@@ -1,6 +1,6 @@
 import { IconArrowBadgeDown } from '@tabler/icons-react';
 import ScrambleText from './ScrambleText';
-import AddsPopup from './AddsPopup';
+// import AddsPopup from './AddsPopup';
 export default function SynthIntro() {
   return (
     <section
@@ -56,7 +56,7 @@ export default function SynthIntro() {
           </a>
         </div>
       </div>
-      <AddsPopup />
+      {/* <AddsPopup /> */}
     </section >
   );
 }
