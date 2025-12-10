@@ -1,5 +1,6 @@
 import { IconArrowBadgeDown } from '@tabler/icons-react';
 import ScrambleText from './ScrambleText';
+import AddsPopup from './AddsPopup';
 export default function SynthIntro() {
   return (
     <section
@@ -34,8 +35,8 @@ export default function SynthIntro() {
           DANIEL BITTAN
         </h1>
         <div className="relative w-full flex justify-center">
-          <ScrambleText text="Software Developer" classes="subTitle text-[1.45rem] lg:text-[3rem] bg-clip-text absolute top-1" />
-          <ScrambleText text="Software Developer" classes="text-[1.46rem] lg:text-[3.05rem] text-[#b61a63]" />
+          <ScrambleText text="Full stack web developer" classes="subTitle text-[1.45rem] lg:text-[3rem] bg-clip-text absolute top-1" />
+          <ScrambleText text="Full stack web developer" classes="text-[1.46rem] lg:text-[3.05rem] text-[#b61a63]" />
         </div>
         <div className='w-full h-auto flex flex-col justify-center items-center mt-14'>
           <a href="#aboutme" className="relative flex flex-col gap-4 justify-center items-center">
@@ -55,8 +56,7 @@ export default function SynthIntro() {
           </a>
         </div>
       </div>
-
-
+      <AddsPopup />
     </section >
   );
 }
