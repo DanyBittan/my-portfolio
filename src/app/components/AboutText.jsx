@@ -54,7 +54,7 @@ export default function AboutText() {
                     </p>
 
                     <span className={`${displayedParagraph < 2 && "hidden"}`}>
-                        Some of technological stack :
+                        Some of my technological stack :
                     </span>
 
                     <div
