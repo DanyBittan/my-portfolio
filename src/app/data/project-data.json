@@ -2,6 +2,7 @@
     "DizManga": {
         "description": "Comic book and manga library store with user authentication, admin panel, and extended database management.",
         "img": "/Pictures/DizManga.png",
+        "imgCover": "/Pictures/DizMangaCover.png",
         "language": [
             "Laravel",
             "PHP",

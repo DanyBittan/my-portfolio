@@ -20,7 +20,7 @@ export default function ProjectShowcase(prop) {
       }
       {
         project.img && (<Image
-          src={project?.img}
+          src={(project.imgCover && !isOpen) ? project?.imgCover : project?.img}
           alt="Project Image"
           fill
           priority
