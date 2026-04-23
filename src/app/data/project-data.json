@@ -1,5 +1,19 @@
 {
+    "Physics Draft": {
+        "name": "Physics-Draft",
+        "description": "Physics simulation with real time calculation and variable settings",
+        "language": [
+            "React",
+            "TypeScript",
+            "Bun",
+            "CSS",
+            "TailWindCSS",
+            "OpenCode"
+        ],
+        "url": "https://physics-draft.netlify.app/"
+    },
     "DizManga": {
+        "name": "DizManga",
         "description": "Comic book and manga library store with user authentication, admin panel, and extended database management.",
         "img": "/Pictures/DizManga.png",
         "imgCover": "/Pictures/DizMangaCover.png",
@@ -15,8 +29,8 @@
         "github": "https://github.com/DanyBittan/DizManga"
     },
     "Medicine Search": {
+        "name": "Medicine Search Bar",
         "description": "Search for drugs and their information using an external API, with a clean and responsive design.",
-        "img": "/Pictures/DrugSearch.png",
         "language": [
             "React",
             "Javascript",
@@ -28,6 +42,7 @@
         "github": "https://github.com/DanyBittan/Prueba-Tecnica-Jaraxa"
     },
     "Store Finder": {
+        "name": "Store locator",
         "description": "Store Finder is a web application designed to help users locate stores and points of interest nearby, providing accurate and real-time location data.",
         "img": "/Pictures/storefinder.png",
         "language": [
