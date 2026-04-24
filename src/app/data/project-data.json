@@ -1,7 +1,7 @@
 {
     "Physics Draft": {
         "name": "Physics-Draft",
-        "description": "One of my most recent projects, developed in collaboration with a close friend. It is a real-time physics simulation featuring dynamic calculations and customizable variables.",
+        "description": "One of my most recent projects, still in development in collaboration with a close friend. It is a real-time physics simulation featuring dynamic calculations and customizable variables.",
         "iframe": true,
         "img": "/Pictures/Physics.png",
         "imgMobile": "/Pictures/Physicsmobile.png",
