@@ -1,7 +1,10 @@
 {
     "Physics Draft": {
         "name": "Physics-Draft",
-        "description": "Physics simulation with real time calculation and variable settings",
+        "description": "It is one of my most recent projects and one I still work on with a good friend of mine. Physics simulation with real time calculation and variable settings.",
+        "iframe": true,
+        "img": "/Pictures/Physics.png",
+        "imgMobile": "/Pictures/Physicsmobile.png",
         "language": [
             "React",
             "TypeScript",
@@ -16,7 +19,7 @@
         "name": "DizManga",
         "description": "Comic book and manga library store with user authentication, admin panel, and extended database management.",
         "img": "/Pictures/DizManga.png",
-        "imgCover": "/Pictures/DizMangaCover.png",
+        "imgMobile": "/Pictures/DizMangamobile.png",
         "language": [
             "Laravel",
             "PHP",
@@ -31,6 +34,9 @@
     "Medicine Search": {
         "name": "Medicine Search Bar",
         "description": "Search for drugs and their information using an external API, with a clean and responsive design.",
+        "iframe": true,
+        "img": "/Pictures/DrugSearch.png",
+        "imgMobile": "/Pictures/DrugSearchmobile.png",
         "language": [
             "React",
             "Javascript",
@@ -45,6 +51,7 @@
         "name": "Store locator",
         "description": "Store Finder is a web application designed to help users locate stores and points of interest nearby, providing accurate and real-time location data.",
         "img": "/Pictures/storefinder.png",
+        "imgMobile": "/Pictures/storefindermobile.png",
         "language": [
             "Vue",
             "Node.js",
