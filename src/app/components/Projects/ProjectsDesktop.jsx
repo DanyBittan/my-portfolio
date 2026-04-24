@@ -6,6 +6,11 @@ import projectData from "@/data/project-data.json";
 export default function ProjectsDesktop({ activeProject, onSelectProject, showStaticImage, onToggleView, useImgMobile }) {
   const projectsArray = Object.values(projectData);
   const projectNames = Object.keys(projectData);
+  const [isInteracted, setIsInteracted] = useState(false);
+
+  useEffect(() => {
+    setIsInteracted(false);
+  }, [activeProject?.name]);
 
   return (
     <div className="w-full h-full flex flex-col lg:flex-row gap-2 lg:gap-3 font-pixelify">
@@ -34,6 +39,7 @@ export default function ProjectsDesktop({ activeProject, onSelectProject, showSt
             );
           })}
         </div>
+        <div className="text-2xl bg bg-purple-900/60 p-2 border-t-2 border-purple-500/60 ">The projects with a PRESS TO START button are interactive</div>
       </div>
 
       {/* Main Arcade Screen - CRT Style */}
@@ -44,7 +50,7 @@ export default function ProjectsDesktop({ activeProject, onSelectProject, showSt
           {activeProject?.iframe && activeProject.img && (
             <button
               onClick={onToggleView}
-              className="absolute top-2 right-2 z-20 px-3 py-1 text-md font-pixelify bg-purple-800/90 text-pink-200 border border-pink-500/50 hover:bg-pink-700/50 transition-colors rounded-lg"
+              className="absolute top-2 right-2 z-20 px-3 py-1 text-md font-pixelify bg-purple-800/90 text-pink-200 border border-pink-500/80 hover:bg-pink-700/80 transition-colors rounded-lg"
             >
               {showStaticImage ? '[LIVE]' : '[IMG]'}
             </button>
@@ -57,7 +63,7 @@ export default function ProjectsDesktop({ activeProject, onSelectProject, showSt
                 href={activeProject.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-3 py-1 text-md font-pixelify bg-purple-800/90 text-pink-200 border border-pink-500/50 hover:bg-pink-700/50 transition-colors rounded-lg"
+                className="px-3 py-1 text-lg font-pixelify bg-purple-800/90 text-pink-200 border border-pink-500/80 hover:bg-pink-700/80 transition-colors rounded-lg"
               >
                 [LAUNCH]
               </a>
@@ -67,7 +73,7 @@ export default function ProjectsDesktop({ activeProject, onSelectProject, showSt
                 href={activeProject.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-3 py-1 text-md font-pixelify bg-purple-800/90 text-purple-300 border border-purple-500/50 hover:bg-purple-700/50 transition-colors rounded-lg"
+                className="px-3 py-1 text-lg font-pixelify bg-purple-800/90 text-purple-300 border border-purple-500/80 hover:bg-purple-700/80 transition-colors rounded-lg"
               >
                 [SOURCE]
               </a>
@@ -75,7 +81,7 @@ export default function ProjectsDesktop({ activeProject, onSelectProject, showSt
           </div>
 
           {/* Screen Content - Centered */}
-          <div className="w-full h-full flex items-center justify-center bg-gray-900 p-0">
+          <div className={`w-full h-full flex items-center justify-center bg-gray-900 p-0 relative ${activeProject?.iframe && !showStaticImage ? 'cursor-pointer transition-all duration-300 hover:shadow-[0_0_0_2px_rgba(0,255,0,0.3),0_0_0_4px_rgba(0,255,0,0.5)]' : ''}`} onClick={() => setIsInteracted(true)}>
             {activeProject ? (
               activeProject.iframe ? (
                 <>
@@ -93,6 +99,18 @@ export default function ProjectsDesktop({ activeProject, onSelectProject, showSt
                       sandbox="allow-scripts allow-same-origin allow-forms"
                     />
                   )}
+                  {/* Arcade/Terminal Label - Blinking */}
+                  {!isInteracted && (
+                    <div className="absolute m-auto left-1/2 transform -translate-x-1/2">
+                      <span className="font-pixelify text-xl animate-blink text-pink-300 bg-purple-900/90 px-3 py-1 rounded border border-pink-500/50">
+                        PRESS START TO PLAY
+                      </span>
+                    </div>
+                  )}
+                  {/* Glass Effect Overlay with Scanlines */}
+                  <div className="absolute inset-0 pointer-events-none">
+                    <div className="w-full h-full bg-[linear-gradient(180deg,rgba(0,0,0,0.05)_50%,transparent_50%)] bg-[length:100%_4px] opacity-0 hover:opacity-100 transition-opacity duration-200"></div>
+                  </div>
                 </>
               ) : (
                 <img
