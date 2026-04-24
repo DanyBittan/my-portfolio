@@ -43,7 +43,7 @@ export default function SynthIntro() {
             <div
               className="flex justify-evenly items-center px-2 py-2 bg-purple-950 border-2 border-purple-600/60 shadow-md shadow-pink-500/30 font-pixelify rounded-xl"
             >
-              {Array.from({ length: 4 }).map((i) => (
+              {Array.from({ length: 4 }).map((_, i) => (
                 <IconArrowBadgeDown
                   key={i}
                   stroke={2}
