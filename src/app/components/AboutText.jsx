@@ -47,7 +47,7 @@ export default function AboutText() {
 
                 <div className="h-auto flex flex-col gap-4 md:gap-6 text-md md:text-lg lg:text-xl xl:text-2xl px-6 md:px-8 mb-[4rem]">
                     <p className={`${displayedParagraph < 1 ? "hidden" : "visible"}`}>
-                        Hey there, I’m Daniel Bittan Graells — a junior web developer who
+                        Hey there, I’m Daniel Bittan Graells — a software developer who
                         enjoys turning ideas into interactive experiences.
                         <br />
                         I am a huge nerd for comics, video games, and technology in general.
@@ -61,8 +61,8 @@ export default function AboutText() {
                         className={`${displayedParagraph < 2 ? "hidden" : "flex"
                             } space-y-1 flex-col flex-wrap h-36 lg:h-44 xl:h-52`}
                     >
-                        {visibleSkills.map((skill, i) => (
-                            <div key={i} className="pl-4 tracking-widest text-orange-400">
+                        {visibleSkills.map((skill) => (
+                            <div key={skill} className="pl-4 tracking-widest text-orange-400">
                                 ▸ {skill}
                             </div>
                         ))}
