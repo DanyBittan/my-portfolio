@@ -1,8 +1,25 @@
 {
+    "Physics Draft": {
+        "name": "Physics-Draft",
+        "description": "One of my most recent projects, still in development in collaboration with a close friend. It is a real-time physics simulation featuring dynamic calculations and customizable variables.",
+        "iframe": true,
+        "img": "/Pictures/Physics.png",
+        "imgMobile": "/Pictures/Physicsmobile.png",
+        "language": [
+            "React",
+            "TypeScript",
+            "Bun",
+            "CSS",
+            "TailWindCSS",
+            "OpenCode"
+        ],
+        "url": "https://physics-draft.netlify.app/"
+    },
     "DizManga": {
+        "name": "DizManga",
         "description": "Comic book and manga library store with user authentication, admin panel, and extended database management.",
         "img": "/Pictures/DizManga.png",
-        "imgCover": "/Pictures/DizMangaCover.png",
+        "imgMobile": "/Pictures/DizMangamobile.png",
         "language": [
             "Laravel",
             "PHP",
@@ -15,8 +32,11 @@
         "github": "https://github.com/DanyBittan/DizManga"
     },
     "Medicine Search": {
+        "name": "Medicine Search Bar",
         "description": "Search for drugs and their information using an external API, with a clean and responsive design.",
+        "iframe": true,
         "img": "/Pictures/DrugSearch.png",
+        "imgMobile": "/Pictures/DrugSearchmobile.png",
         "language": [
             "React",
             "Javascript",
@@ -28,8 +48,10 @@
         "github": "https://github.com/DanyBittan/Prueba-Tecnica-Jaraxa"
     },
     "Store Finder": {
+        "name": "Store locator",
         "description": "Store Finder is a web application designed to help users locate stores and points of interest nearby, providing accurate and real-time location data.",
         "img": "/Pictures/storefinder.png",
+        "imgMobile": "/Pictures/storefindermobile.png",
         "language": [
             "Vue",
             "Node.js",

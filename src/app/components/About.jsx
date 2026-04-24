@@ -41,7 +41,7 @@ export default function About() {
           <div id="about-tab" className={`${buttonClasses("About Me")} ml-2`} onClick={() => setAboutTopic("About Me")}>About Me</div>
           <div id="projects-tab" className={`${buttonClasses("Projects")}`} onClick={() => setAboutTopic("Projects")}>Projects</div>
         </div>
-        <div ref={ref} className="h-[calc(100%-3rem)] flex justify-center items-center">
+        <div ref={ref} className="h-[calc(100%-3rem)] w-full">
 
           {!animationEnd && inView ? (
             <div className="w-full h-full flex justify-center items-center text-3xl md:text-5xl lg:text-6xl">
@@ -51,7 +51,7 @@ export default function About() {
               />
             </div>
           ) : (
-            <div id="aboutContent" className="w-full h-full relative flex flex-col items-start" >
+            <div id="aboutContent" className="w-full h-full" >
 
               {renderSwitch(aboutTopic)}
             </div>

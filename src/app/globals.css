@@ -55,7 +55,6 @@ body {
 }
 
 @keyframes blink {
-
   from,
   to {
     border-color: transparent;
@@ -64,4 +63,13 @@ body {
   50% {
     border-color: rgb(253 186 116);
   }
+}
+
+@keyframes text-blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: text-blink 1s step-end infinite;
 }
