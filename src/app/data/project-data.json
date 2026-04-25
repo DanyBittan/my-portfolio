@@ -32,7 +32,7 @@
         "github": "https://github.com/DanyBittan/DizManga"
     },
     "Medicine Search": {
-        "name": "Medicine Search Bar",
+        "name": "MediSearch",
         "description": "Search for drugs and their information using an external API, with a clean and responsive design.",
         "iframe": true,
         "img": "/Pictures/DrugSearch.png",
