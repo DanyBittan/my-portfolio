@@ -15,7 +15,7 @@
       transparent 20%,
       rgba(168, 101, 165, 0.4));
   box-shadow: inset 0 0 5em 5px;
-  perspective: 102vh;
+  perspective: 88vh;
 
   &:after {
     content: "";
